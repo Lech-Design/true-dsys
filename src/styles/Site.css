@@ -1,0 +1,113 @@
+.opacity-thirty {
+  opacity: 0.3;
+}
+
+.warning-text .me-auto {
+  color: orange;
+}
+
+#delete-warning > div > div.mud-alert-icon.mud-alert-icon-left > svg {
+  font-size: 2.25rem;
+}
+
+.icon-size-xlarge,
+.icon-size-xlarge svg {
+  font-size: 3rem !important;
+}
+
+.icon-size-xxlarge,
+.icon-size-xxlarge svg {
+  font-size: 4rem !important;
+}
+
+.card-disabled {
+  background-color: #d3d3d3;
+}
+
+.blur {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+/*  Home Page Styles  */
+#home .card {
+  min-height: 372px;
+}
+
+#home .card-content {
+  min-height: 120px;
+}
+
+/*  Net Zero Index Page Styles  */
+#netzeroindex .card {
+  min-height: 372px;
+}
+
+#netzeroindex .cardContent {
+  min-height: 160px;
+}
+
+/*  Modify draws  */
+@media screen and (min-width: 800px) {
+  .modify-item-draw {
+    --mud-drawer-width: 20% !important;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 799px) {
+  .modify-item-draw {
+    --mud-drawer-width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .modify-item-draw {
+    --mud-drawer-width: 90% !important;
+  }
+}
+
+.component-workflow-complete-icon svg {
+  margin-left: -5px !important;
+  margin-right: -5px !important;
+}
+
+.carbon-savings-chart {
+  min-height: 450px;
+}
+
+@media screen and (max-width: 699px) {
+  .carbon-savings-chart {
+    min-height: 120px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 2024 Additions */
+
+.mud-button {
+  padding: 0.6em 1.25em;
+}
+
+.mud-tab {
+  min-width: 160px;
+}
+
+.mud-tab-slider {
+  width: 160px;
+  left: 320px;
+  transition: left 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+/* Custom utilities */
+
+.border-left-thick {
+  border-left: 0.5rem solid var(--mud-palette-primary);
+}
+
+.tr-docs--min-height {
+  min-height: 700px;
+}
+
+.tr-tool-drawer--min-width {
+  min-width: 360px;
+}

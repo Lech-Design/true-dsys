@@ -1,0 +1,108 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+<Meta title="Start here/Intro" />
+
+{/* <img className="sg-img" src="assets/soa_logo_crop.png" /> */}
+
+# Welcome to the True Design System
+
+<div className="width-60 margin_bottom_med">
+
+This design system represents the source of truth for the True web application.
+
+This documentation includes resources to create consistent user interfaces for True. Instead of focusing on the minutae, developers can focus on application logic, while designers can focus on user experience and flows.
+
+</div>
+<br/>
+
+## Design system goals
+
+- Ensure and maintain consistency
+- Provide guidance for correct layout and composition
+- Reduce cognitive load for engineers
+- Speed up development time
+  <br />
+  <br />
+
+## How to use this Design system?
+
+<br />
+### For Engineers
+
+The components defined in this documentation mirror the naming conventions of Mudblazor.
+They are designed to utilise only default styles. Property naming remains loosely consistent.
+
+#### Component hierarchy:
+
+- **Mudblazor components** - The building blocks of Mudblazor.
+- **Decorators** - empty wrappers for Mudblazor components that inject specific CSS utility classes to provide reuasable consistent layouts
+- **Micro Patterns** - resuasable collections of Mudblazor components that define structure and layout
+- **Feature Patterns** - Examples of specific application features and layouts
+
+#### How we compose UI elements with Mudblazor
+
+1. Refer to this doc for basic page structure
+
+2. Structure content areas with variations of the below pattern:
+   > **Why do we do this?** <br/>
+   > The grid allows us to align content logically, MudItem provides an empty container <br/>that can be styled easily to provide consitent spacing and padding.
+
+```js
+<MudGrid>
+  <MudItem>
+    @Content
+  </MudItem>
+<MudGrid>
+```
+
+3. Extend the layout and style of components with the provided Mudblazor utility classes
+
+   > **Why do we do this?** <br/>
+   > Mudblazor provides a comprehensive set of utilty classes to achieve desired visual fidelity
+
+   <br />
+
+4. Avoid using inline styles
+
+   > **Why we do this?** <br/>
+   > Using inline styles makes it far more difficult to maintain style consistency, and when <br/>changes are needed updating all these values is time consuming and error prone.
+
+   <br />
+
+## Design system structure
+
+<p className="margin_bottom_med width-60">
+  The design system at it's heart is a collection of basic building blocks that
+  allow for complex patterns to be built. By using atomic principles we can
+  logically split the design system into 3 core units:{" "}
+  <b>tokens, components and patterns.</b>
+</p>
+
+## Tokens
+
+<p className="mb-1">
+  Within the context of Mudblazor we define Tokens as the CSS custom properties
+  (variables), that can be modified via Theming.
+</p>
+
+#### Mudblazor and Stylesheets{" "}
+
+The True app contains three main stylesheets:
+
+- MudBlazor.css - Contains all default tokens and classes for Mudblazor
+- A Style tag injects all the themable CSS variables (custom properties) into the app
+- A custom Site.css file is loaded containing specific fixes for edge cases
+
+## Components
+
+<p className="margin_bottom_med width-60">
+  The simplest building blocks to create the UI, such as text blocks, titles and
+  buttons. These are built by combining tokens together.
+</p>
+
+## Patterns
+
+<p className="margin_bottom_med width-60">
+  Patterns define specific UI elements that are required by the app, these are
+  contructed by combining multiple components together.
+</p>
