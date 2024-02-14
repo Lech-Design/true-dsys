@@ -1,0 +1,44 @@
+:root {
+  --tr-color--interaction-primary: rgba(0, 178, 255, 1);
+  --tr-color--interaction-secondary: rgba(0, 0, 0, 1);
+  --tr-color--interaction-teriary: rgba(235, 81, 129, 1);
+  --tr-color--background-200: #f7f8fc;
+  --tr-color--background-dark-100: rgba(0, 0, 0, 1);
+  --tr-color--background-100: rgba(255, 255, 255, 1);
+  --tr-color--text-primary-200: rgba(0, 0, 0, 0.6980392156862745);
+  --tr-color--success: rgba(90, 197, 97, 1);
+  --tr-color--text-dark: rgba(74, 74, 74, 1);
+  --tr-color--error: rgba(225, 82, 65, 1);
+  --tr-color--info: rgba(96, 197, 167, 1);
+  --tr-color--warning: rgba(241, 157, 56, 1);
+  --tr-color--text-primary-100: rgba(0, 0, 0, 1);
+  --tr-border--radius-regular: 0.5rem;
+  --tr-border--radius-medium: 1rem;
+  --tr-border--radius-large: 1.5rem;
+  --tr-border--radius-xl: 2rem;
+  --tr-font--family-primary: "Open Sans, Helvetica", "Verdana", "Arial",
+    "sans-serif";
+  --tr-font--family-secondary: "Open Sans", "Helvetica", "Arial", "sans-serif";
+  --tr-font--size-xs: 0.5rem;
+  --tr-font--size-subtitle2: 0.875rem;
+  --tr-font--size-caption: 0.75rem;
+  --tr-font--size-body2: 0.875rem;
+  --tr-font--size-button: 0.875rem;
+  --tr-font--size-regular: 1rem;
+  --tr-font--size-h6: 1.25rem;
+  --tr-font--size-h5: 1.5rem;
+  --tr-font--size-h4: 1rem;
+  --tr-font--size-h3: 1.25rem;
+  --tr-font--size-h2: 1.5rem;
+  --tr-font--size-h1: 1.75rem;
+  --tr-spacing--025: 0.25rem;
+  --tr-spacing--050: 0.5rem;
+  --tr-spacing--100: 1rem;
+  --tr-spacing--125: 1.25rem;
+  --tr-spacing--150: 1.5rem;
+  --tr-spacing--175: 1.75rem;
+  --tr-spacing--200: 2rem;
+  --tr-spacing--250: 2.5rem;
+  --tr-spacing--300: 3rem;
+  --tr-spacing--400: 4rem;
+}

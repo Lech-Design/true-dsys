@@ -1,0 +1,40 @@
+.sbdocs {
+  background: var(--tr-color--background-200) !important;
+}
+
+.css-qa4clq :where(p:not(.sb-anchor, .sb-unstyled, .sb-unstyled p)) {
+  font-size: 1rem !important;
+}
+
+[data-selected="true"] {
+  border-radius: 50px !important;
+}
+
+.tr-docs--min-height {
+  min-height: 700px;
+}
+
+.tr-docs--min-width {
+  min-width: 360px;
+}
+
+.tr-docs--dummy-block {
+  width: 300px;
+  height: 250px;
+  background-color: #68b0b9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.tr-docs--dummy-paper {
+  width: 100% !important;
+  height: 400px !important;
+}
+
+.tr-docs-background-grey {
+  background-color: #ddd;
+}

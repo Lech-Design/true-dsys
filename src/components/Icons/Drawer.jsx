@@ -1,9 +1,9 @@
 export default function IconDrawer(props) {
-  let { children } = props;
+  let { children, size } = props;
   return (
     <span className={props.classes}>
       <svg
-        className="mud-icon-root mud-svg-icon mud-icon-size-medium"
+        className={`mud-icon-root mud-svg-icon mud-icon-size-${size}`}
         focusable="false"
         viewBox="0 0 24 24"
         aria-hidden="true"

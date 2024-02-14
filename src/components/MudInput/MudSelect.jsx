@@ -9,6 +9,7 @@ export default function MudSelect(props) {
   let { children } = props;
   let classes = props.classes ? ` ${props.classes}` : "";
   let typeClass = props.variant;
+  let dense = props.dense ? " mud-input-root-margin-dense" : "";
   let items = props.items;
 
   function showDropdown() {
@@ -24,17 +25,17 @@ export default function MudSelect(props) {
       <div className="mud-input-control mud-select">
         <div className="mud-input-control-input-container">
           <div
-            className={`mud-input mud-input-${typeClass} mud-input-adorned-end mud-shrink mud-select-input ${
+            className={`mud-input mud-input-${typeClass} mud-input-adorned-end${dense} mud-shrink mud-select-input ${
               typeClass === "text" ? "mud-input-underline" : ""
             }`}
             onClick={showDropdown}
           >
             <input
-              className={`mud-input-slot mud-input-root mud-input-root-${typeClass} mud-input-root-adorned-end mud-select-input`}
+              className={`mud-input-slot mud-input-root mud-input-root-${typeClass} mud-input-root-adorned-end${dense} mud-select-input`}
               type={"hidden"}
             />
             <div
-              className={`mud-input-slot mud-input-root mud-input-root-${typeClass} mud-input-root-adorned-end mud-select-input`}
+              className={`mud-input-slot mud-input-root mud-input-root-${typeClass} mud-input-root-adorned-end${dense} mud-select-input`}
               style={{ display: "inline" }}
             >
               {props.items[index]}

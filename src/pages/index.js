@@ -1,7 +1,8 @@
 import Head from "next/head";
-import TrueContent from "@/components/TrueContent/TrueContent";
+import TrueContent from "@/components/MudContent/MudContent";
 import Toolbar from "@/components/MudToolbar/MudToolBar";
-import ExamplePage from "@/components/PatternsPages/Example/ExamplePattern";
+// import ExamplePage from "@/components/Patterns/Example/ExamplePattern";
+import PageTemplate from "@/components/Patterns/Pages/PageTemplate";
 import CardPatternDefault from "@/components/PatternsComponents/CardPattern/CardDefault";
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ExamplePage />
+      {/* <ExamplePage /> */}
+      <PageTemplate />
     </>
   );
 }

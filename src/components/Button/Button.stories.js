@@ -1,8 +1,9 @@
 import MudIconButton from "./MudIconButton";
 import IconDrawer from "../Icons/Drawer";
+import MudButton from "./MudButton";
 
 export default {
-  title: "Design System / Components / MudBlazor / MudIconButton",
+  title: "Design System/Components/MudBlazor/Mud Buttons",
   component: MudIconButton,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
@@ -26,4 +27,25 @@ export const IconButton = {
       <IconDrawer classes="mud-icon-button-label" />
     </MudIconButton>
   ),
+};
+
+export const Primary = {
+  args: {
+    variant: "primary",
+  },
+  render: (args) => <MudButton {...args}>Click me</MudButton>,
+};
+
+export const Secondary = {
+  args: {
+    variant: "secondary",
+  },
+  render: (args) => <MudButton {...args}>Click me</MudButton>,
+};
+
+export const Outlined = {
+  args: {
+    variant: "outlined",
+  },
+  render: (args) => <MudButton {...args}>Click me</MudButton>,
 };

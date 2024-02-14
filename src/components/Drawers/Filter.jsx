@@ -10,11 +10,12 @@ import MudIconButton from "../Button/MudIconButton";
 import MudDivider from "../Layout/MudDivider";
 import MudChipSet from "../MudInput/MudChipset";
 import IconClose from "../Icons/Close";
+import ActionPanelHeader from "../Patterns/True/ActionPanel/ActionPanelHeader";
 
 import { useState } from "react";
 
 export default function FilterDrawer(props) {
-  let { children } = props;
+  let { children, action, open } = props;
   const results = props.results;
   let [tempresults, setTempresults] = useState(results);
 
@@ -35,22 +36,10 @@ export default function FilterDrawer(props) {
   }
 
   return (
-    <MudDrawRight classes={classes}>
+    <MudDrawRight classes={classes} open={open}>
       <MudGrid>
         {/* Header */}
-        <GridItemDrawerHeader classes="border-left-thick">
-          <MudGrid classes="align-center justify-space-between">
-            <MudTypography typo="h6" classes="mud-primary-text">
-              Filter
-            </MudTypography>
-            <MudIconButton>
-              <IconClose />
-            </MudIconButton>
-          </MudGrid>
-        </GridItemDrawerHeader>
-        <MudItem classes="mud-grid-item-xs-12">
-          <MudDivider />
-        </MudItem>
+        <ActionPanelHeader action={action} title="Filter" />
 
         {/* Date period */}
         <GridItemDrawer classes="">

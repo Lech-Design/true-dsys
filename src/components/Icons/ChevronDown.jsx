@@ -1,9 +1,10 @@
 export default function IconChevronDown(props) {
+  let size = props.size ? props.size : "medium";
+
   return (
     <svg
       aria-label="Icon"
-      tabindex="-1"
-      className="mud-icon-root mud-icon-default mud-svg-icon mud-icon-size-medium"
+      className={`mud-icon-root mud-icon-default mud-svg-icon mud-icon-size-${size}`}
       focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"

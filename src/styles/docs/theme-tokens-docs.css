@@ -1,0 +1,111 @@
+:root {
+  /**
+  * @tokens Colors
+  * @presenter Color
+  */
+  --mud-palette-primary: var(--tr-color--interaction-primary);
+  --mud-palette-secondary: var(--tr-color--interaction-secondary);
+  --mud-palette-tertiary: var(--tr-color--interaction-teriary);
+  --mud-palette-background: var(--tr-color--background-200);
+  --mud-palette-appbar-background: var(--tr-color--background-dark-100);
+  --mud-palette-drawer-background: var(--tr-color--background-100);
+  --mud-palette-drawer-text: var(--tr-color--text-primary-200);
+  --mud-palette-success: var(--tr-color--success);
+  --mud-palette-dark: var(--tr-color--text-dark);
+  --mud-palette-error: var(--tr-color--error);
+  --mud-palette-info: var(--tr-color--info);
+  --mud-palette-warning: var(--tr-color--warning);
+  --mud-palette-text-primary: var(--tr-color--text-primary-100);
+
+  /**
+  * @tokens Border
+  * @presenter BorderRadius
+  */
+  --mud-default-border-radius: var(--tr-border--radius-regular);
+
+  /**
+  * @tokens Font Family
+  * @presenter FontFamily
+  */
+  --mud-typography-default-family: var(--tr-font--family-primary);
+  --mud-typography-h1-family: var(--tr-font--family-primary);
+  --mud-typography-h2-family: var(--tr-font--family-primary);
+  --mud-typography-h3-family: var(--tr-font--family-primary);
+  --mud-typography-h4-family: var(--tr-font--family-primary);
+  --mud-typography-h5-family: var(--tr-font--family-primary);
+  --mud-typography-h6-family: var(--tr-font--family-primary);
+  --mud-typography-button-family: var(--tr-font--family-primary);
+  --mud-typography-body1-family: var(--tr-font--family-primary);
+  --mud-typography-body2-family: var(--tr-font--family-primary);
+  --mud-typography-caption-family: var(--tr-font--family-primary);
+  --mud-typography-subtitle2-family: var(--tr-font--family-primary);
+
+  /**
+  * @tokens Font Size
+  * @presenter FontSize
+  */
+  --mud-typography-default-size: var(--tr-font--size-small);
+  --mud-typography-h1-size: var(--tr-font--size-h1);
+  --mud-typography-h2-size: var(--tr-font--size-h2);
+  --mud-typography-h3-size: var(--tr-font--size-h3);
+  --mud-typography-h4-size: var(--tr-font--size-h4);
+  --mud-typography-h5-size: var(--tr-font--size-h5);
+  --mud-typography-h6-size: var(--tr-font--size-h6);
+  --mud-typography-button-size: var(--tr-font--size-button);
+  --mud-typography-body1-size: var(--tr-font--size-regular);
+  --mud-typography-body2-size: var(--tr-font--size-body2);
+  --mud-typography-caption-size: var(--tr-font--size-caption);
+  --mud-typography-subtitle2-size: var(--tr-font--size-subtitle2);
+
+  /**
+  * @tokens-end
+  */
+
+  --mud-typography-default-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-default-lineheight: 1.43;
+  --mud-typography-default-letterspacing: 0.01071em;
+
+  --mud-typography-h1-weight: 300 var(--tr-font-weight-300);
+  --mud-typography-h1-lineheight: 1.167;
+  --mud-typography-h1-letterspacing: -0.01562em;
+
+  --mud-typography-h2-weight: 300 var(--tr-font-weight-300);
+  --mud-typography-h2-lineheight: 1.2;
+  --mud-typography-h2-letterspacing: -0.00833em;
+
+  --mud-typography-h3-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-h3-lineheight: 1.167;
+  --mud-typography-h3-letterspacing: 0;
+
+  --mud-typography-h4-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-h4-lineheight: 1.235;
+  --mud-typography-h4-letterspacing: 0.00735em;
+
+  --mud-typography-h5-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-h5-lineheight: 1.334;
+  --mud-typography-h5-letterspacing: 0;
+
+  --mud-typography-h6-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-h6-lineheight: 1.6;
+  --mud-typography-h6-letterspacing: 0.0075em;
+
+  --mud-typography-button-weight: 500 var(--tr-font-weight-500);
+  --mud-typography-button-lineheight: 20px;
+  --mud-typography-button-letterspacing: 0.02857em;
+
+  --mud-typography-body1-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-body1-lineheight: 1.5;
+  --mud-typography-body1-letterspacing: 0.00938em;
+
+  --mud-typography-body2-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-body2-lineheight: 1.43;
+  --mud-typography-body2-letterspacing: 0.01071em;
+
+  --mud-typography-caption-weight: 400 var(--tr-font-weight-400);
+  --mud-typography-caption-lineheight: 1.66;
+  --mud-typography-caption-letterspacing: 0.03333em;
+
+  --mud-typography-subtitle2-weight: 500 var(--tr-font-weight-500);
+  --mud-typography-subtitle2-lineheight: 1.57;
+  --mud-typography-subtitle2-letterspacing: 0.00714em;
+}

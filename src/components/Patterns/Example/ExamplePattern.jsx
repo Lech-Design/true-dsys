@@ -1,4 +1,4 @@
-import TrueContent from "@/components/TrueContent/TrueContent";
+import TrueContent from "@/components/MudContent/MudContent";
 import MudContainer from "@/components/Layout/MudContainer";
 import MudGrid from "@/components/Layout/MudGrid";
 import MudItem from "@/components/Layout/MudItem";

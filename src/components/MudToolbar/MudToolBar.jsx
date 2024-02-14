@@ -6,8 +6,8 @@ export default function MudToolBar(props) {
   let classes = props.classes ? ` ${props.classes}` : "";
   let { children } = props;
   return (
-    <div className={"mud-toolbar mud-elevation-2" + classes}>
-      <MudIconButton classes="mud-button-root mud-icon-button mud-inherit-text hover:mud-inherit-hover mud-ripple mud-ripple-icon ml-3">
+    <div className={"mud-toolbar" + classes}>
+      <MudIconButton classes="mud-inherit-text hover:mud-inherit-hover mud-ripple mud-ripple-icon ml-3">
         <IconDrawer classes="mud-icon-button-label" />
       </MudIconButton>
       <BreadCrumbs classes="mud-breadcrumbs mud-typography-body1" />

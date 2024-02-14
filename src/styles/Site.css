@@ -84,28 +84,24 @@
 /* ------------------------------------------------------------------ */
 /* 2024 Additions */
 
-.mud-button {
+/* .mud-button {
   padding: 0.6em 1.25em;
-}
+} */
 
 .mud-tab {
   min-width: 160px;
 }
 
-.mud-tab-slider {
+/* .mud-tab-slider {
   width: 160px;
   left: 320px;
   transition: left 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-}
+} */
 
 /* Custom utilities */
 
 .border-left-thick {
   border-left: 0.5rem solid var(--mud-palette-primary);
-}
-
-.tr-docs--min-height {
-  min-height: 700px;
 }
 
 .tr-tool-drawer--min-width {
