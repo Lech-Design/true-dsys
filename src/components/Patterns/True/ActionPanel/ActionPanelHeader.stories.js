@@ -3,7 +3,7 @@ import MudContainer from "../../../Layout/MudContainer";
 import ActionPanelHeader from "./ActionPanelHeader";
 
 export default {
-  title: "Design System/Patterns/Action Panel/Specs",
+  title: "Patterns/Action Panel/Header",
   component: ActionPanelHeader,
 
   decorators: [
@@ -14,6 +14,7 @@ export default {
           width: "350px",
           backgroundColor: "#fff",
           margin: "3em",
+          marginLeft: "auto",
         }}
       >
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
@@ -23,7 +24,7 @@ export default {
   ],
 
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: "center",

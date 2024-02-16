@@ -7,7 +7,7 @@ export default function MudDrawRight(props) {
   return (
     <MudDraw
       classes={
-        `mud-drawer mud-drawer-fixed mud-drawer-pos-right mud-drawer--${open} mud-drawer-md mud-drawer-clipped-never mud-elevation-1 mud-drawer-temporary modify-item-draw` +
+        `mud-drawer-fixed mud-drawer-pos-right mud-drawer--${open} mud-drawer-md mud-drawer-clipped-never mud-elevation-1 mud-drawer-temporary modify-item-draw` +
         classes
       }
       open={props.open}

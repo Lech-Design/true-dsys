@@ -1,15 +1,15 @@
 import MudGrid from "../Layout/MudGrid";
 import MudItem from "../Layout/MudItem";
-import GridItemDrawer from "../Layout/GridPresets/GridItemDrawer";
-import GridItemDrawerHeader from "../Layout/GridPresets/GridItemDrawerHeader";
+import TrueItemDrawer from "../decorators/TrueItemDrawer";
+
 import MudDatePicker from "../MudInput/MudDatePicker";
 import MudTypography from "../MudTypography/MudTypography";
 import MudDrawRight from "../MudDrawer/MudDrawerRight";
 import MudButton from "../Button/MudButton";
-import MudIconButton from "../Button/MudIconButton";
+
 import MudDivider from "../Layout/MudDivider";
 import MudChipSet from "../MudInput/MudChipset";
-import IconClose from "../Icons/Close";
+
 import ActionPanelHeader from "../Patterns/True/ActionPanel/ActionPanelHeader";
 
 import { useState } from "react";
@@ -42,7 +42,7 @@ export default function FilterDrawer(props) {
         <ActionPanelHeader action={action} title="Filter" />
 
         {/* Date period */}
-        <GridItemDrawer classes="">
+        <TrueItemDrawer classes="">
           <MudTypography typo="body1" classes="">
             Reporting period
           </MudTypography>
@@ -55,13 +55,13 @@ export default function FilterDrawer(props) {
           >
             10/08/2023 - 10/01/2024
           </MudDatePicker>
-        </GridItemDrawer>
+        </TrueItemDrawer>
 
         <MudItem classes="mud-grid-item-xs-12 pl-6 pr-6">
           <MudDivider />
         </MudItem>
 
-        <GridItemDrawer classes="">
+        <TrueItemDrawer classes="">
           <MudTypography typo="body1" classes="pb-4">
             Meter type
           </MudTypography>
@@ -73,11 +73,11 @@ export default function FilterDrawer(props) {
             variant="outlined"
             action={reduceMeters}
           />
-        </GridItemDrawer>
+        </TrueItemDrawer>
         <MudItem classes="mud-grid-item-xs-12 pl-6 pr-6">
           <MudDivider />
         </MudItem>
-        <GridItemDrawer classes="">
+        <TrueItemDrawer classes="">
           <MudTypography typo="body1" classes="pb-4">
             Status
           </MudTypography>
@@ -95,10 +95,10 @@ export default function FilterDrawer(props) {
             variant="text"
             action={reduceStatus}
           />
-        </GridItemDrawer>
-        <GridItemDrawer>
+        </TrueItemDrawer>
+        <TrueItemDrawer>
           <MudButton variant="primary">Show {tempresults} results</MudButton>
-        </GridItemDrawer>
+        </TrueItemDrawer>
       </MudGrid>
     </MudDrawRight>
   );

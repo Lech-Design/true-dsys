@@ -2,7 +2,7 @@ import MudTabs from "./MudTabs";
 import MudTypography from "../MudTypography/MudTypography";
 
 export default {
-  title: "Design System/Components/MudBlazor/Mud Tabs",
+  title: "Components/MudBlazor/Mud Tabs",
   component: MudTabs,
 
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs

@@ -2,7 +2,7 @@ import BillValidation from "./BillValidation";
 import PageTemplateOld from "../../Pages/2023/PageTemplate2023";
 
 export default {
-  title: "Design System/Features/Bill Validation",
+  title: "Features/Bill Validation",
   component: BillValidation,
 
   parameters: {
@@ -13,7 +13,7 @@ export default {
 
 const Template = (args) => <BillValidation {...args} />;
 
-export const Preview = {
+export const Design = {
   args: {
     classes: "",
   },

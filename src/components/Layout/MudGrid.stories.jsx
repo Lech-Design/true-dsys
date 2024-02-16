@@ -4,7 +4,7 @@ import DummyBlock from "../DummyContent/DummyBlock";
 import MudTypography from "../MudTypography/MudTypography";
 
 export default {
-  title: "Design System/Components/MudBlazor/Mud Grid/Grid",
+  title: "Components/MudBlazor/Mud Grid/Grid",
   component: MudGrid,
 
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs

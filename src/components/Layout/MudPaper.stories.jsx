@@ -4,7 +4,7 @@ import MudGrid from "./MudGrid";
 import MudItem from "./MudItem";
 
 export default {
-  title: "Design System/Components/MudBlazor/MudPaper",
+  title: "Components/MudBlazor/MudPaper",
   component: MudPaper,
   decorators: [
     (Story) => (

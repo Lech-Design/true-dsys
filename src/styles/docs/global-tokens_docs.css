@@ -1,4 +1,8 @@
 :root {
+  /**
+  * @tokens Base Colors
+  * @presenter Color
+  */
   --tr-color--interaction-primary: rgba(0, 178, 255, 1);
   --tr-color--interaction-secondary: rgba(0, 0, 0, 1);
   --tr-color--interaction-teriary: rgba(235, 81, 129, 1);
@@ -12,11 +16,15 @@
   --tr-color--info: rgba(96, 197, 167, 1);
   --tr-color--warning: rgba(241, 157, 56, 1);
   --tr-color--text-primary-100: rgba(0, 0, 0, 1);
+  /**
+  * @tokens-end
+  */
   --tr-border--radius-regular: 0.5rem;
   --tr-border--radius-medium: 1rem;
   --tr-border--radius-large: 1.5rem;
   --tr-border--radius-xl: 2rem;
-  --tr-font--family-primary: "Open Sans, Helvetica", "Verdana", "Arial", "sans-serif";
+  --tr-font--family-primary: "Open Sans, Helvetica", "Verdana", "Arial",
+    "sans-serif";
   --tr-font--family-secondary: "Open Sans", "Helvetica", "Arial", "sans-serif";
   --tr-font--size-xs: 0.5rem;
   --tr-font--size-subtitle2: 0.875rem;

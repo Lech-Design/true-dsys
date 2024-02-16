@@ -1,7 +1,7 @@
 import MudTypography from "./MudTypography";
 
 export default {
-  title: "Design System/Components/MudBlazor/Typography",
+  title: "Components/MudBlazor/MudTypography",
   component: MudTypography,
   argTypes: {
     typo: {

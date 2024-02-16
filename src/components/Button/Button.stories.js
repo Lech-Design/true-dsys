@@ -3,7 +3,7 @@ import IconDrawer from "../Icons/Drawer";
 import MudButton from "./MudButton";
 
 export default {
-  title: "Design System/Components/MudBlazor/Mud Buttons",
+  title: "Components/MudBlazor/Mud Buttons",
   component: MudIconButton,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],

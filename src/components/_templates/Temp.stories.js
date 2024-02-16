@@ -1,7 +1,5 @@
-import MudToolBar from "./MudToolBar";
-
 export default {
-  title: "Components/MudBlazor/MudToolBar",
+  title: "Design System / Components/ Temp / Temp story",
   component: MudToolBar,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],

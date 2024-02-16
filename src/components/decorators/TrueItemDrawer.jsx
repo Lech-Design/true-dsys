@@ -1,6 +1,6 @@
-import MudItem from "../MudItem";
+import MudItem from "../Layout/MudItem";
 
-export default function GridItemDrawer(props) {
+export default function TrueItemDrawer(props) {
   let { children } = props;
   let classes = props.classes ? ` ${props.classes}` : "";
   return (

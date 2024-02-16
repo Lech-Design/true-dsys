@@ -2,7 +2,7 @@ import DownloadReport from "./DownloadReport";
 import MudContainer from "../Layout/MudContainer";
 
 export default {
-  title: "Design System/Patterns/Action Panel/Examples/Download Report",
+  title: "Patterns/Action Panel/Examples/Reporting Tool",
   component: DownloadReport,
 
   decorators: [
@@ -22,7 +22,7 @@ export default {
   },
 };
 
-export const ReportingTool = {
+export const Design = {
   args: {
     classes: "tr-docs--min-width",
     drawerClasses: "",

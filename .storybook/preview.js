@@ -17,23 +17,21 @@ const preview = {
       },
     },
     storySort: {
-      method: "alphabetical",
       order: [
-        "Start Here/Docs",
-        ["Readme", "*"],
-        "Design System",
+        "Start Here",
         "Tokens",
         "Components",
         "Patterns",
+        ["Docs", "*"],
         "Features",
-        ["Readme", "*"],
+        "Assets",
       ],
     },
 
     // Uses static folder config, see main.js
     stylesheetToggle: {
       OEM_2023: "/themes/global-tokens.css",
-      OEM_2024: "/themes/global-tokens_theme2.css",
+      OEM_2024: "/testing/global-tokens_theme2.css",
     },
     designToken: {
       disable: true,

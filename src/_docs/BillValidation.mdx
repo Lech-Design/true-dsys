@@ -1,0 +1,85 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+import MudButton from "@/components/Button/MudButton";
+import IconDownload from "@/components/Icons/Download";
+import TrueItemDrawer from "@/components/decorators/TrueItemDrawer";
+import MudChipSetSwitch from "@/components/MudInput/MudChipsetSwitch";
+import MudTypography from "@/components/MudTypography/MudTypography";
+
+import * as PageHeaderStories from "../components/Patterns/True/TruePageHeader.stories";
+import * as ReportStories from "../components/Drawers/DownloadReport.stories";
+import * as BillValStories from "../components/Patterns/Content/BillValidation/BillValidation.stories";
+
+{/* <Meta of={BillValStories} /> */}
+
+<Meta title="Features/Bill Validation/Docs" />
+
+{/* <img className="sg-img" src="assets/soa_logo_crop.png" /> */}
+
+# Downloading a report
+
+A key feature of the True app is the ability to download reports and data to consume later.
+
+To ensure consistency throughout the app and to avoid developers re-inventing the wheel, we have
+designed a reusable pattern we call the **Action Panel**.
+
+<br />
+## The Action Panel
+
+<Canvas of={ReportStories.Design} />
+
+As the name suggests this a Panel to provde consistent user actions throughout the UI.
+
+The Reporting Tool is a specific variation of this Pattern, it is strongly recommended to
+familiarise yourself with the specs and design of the [Action Panel](?path=/docs/patterns-action-panel--docs).
+
+> Check out the **Action** Panel [here](?path=/docs/patterns-action-panel--docs)
+
+<br />
+
+## How the download tool works
+
+<br />
+### Step 1 - Accessing the Download tool
+
+To see the design and interactions see this [page](?path=/story/features-bill-validation--design)
+
+On the main page of Bill Validation a Download Report button is present:
+
+<br />
+<Unstyled>
+  <MudButton variant="outlined" size="small" icon={IconDownload}>
+    Download report
+  </MudButton>
+</Unstyled>
+<br />
+### Step 2 - Using the Download tool
+
+The contents of the Action Panel are dynamic and are populated depending on the context of a specific feature.
+
+For Bill Validation we allow the user to configure 2 options:
+
+<br />
+
+1- Choosing the Meter type (Power or Gas)
+
+- This is uses the MudChipSet component and is configure to work like Radio buttons (single selection).
+
+<div style={{background: "#FFF", padding: "2em", maxWidth: "400px"}}>
+
+    <MudTypography typo="body1" classes="pb-4">
+      Select a Meter type:
+    </MudTypography>
+
+    <MudChipSetSwitch
+      chipList={["Gas", "Power"]}
+      filterValues={[0, 47, 500, 300]}
+      color="dark"
+      variant="text"
+    />
+
+</div>
+<br/>
+
+- Selecting the type of report to Download
+
+  - This uses a MudSelect component configured with the **_outlined_** property.

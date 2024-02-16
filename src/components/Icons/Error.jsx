@@ -1,4 +1,4 @@
-export default function IconSuccess(props) {
+export default function IconError(props) {
   let size = props.size ? props.size : "medium";
   return (
     <svg

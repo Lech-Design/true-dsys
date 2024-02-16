@@ -1,12 +1,13 @@
-import FilterDrawer from "./Filter";
-import MudContainer from "../Layout/MudContainer";
+import MudDraw from "./MudDrawer";
+
+import MudDrawerContent from "./MudDrawerContent";
 
 export default {
-  title: "Patterns/Action Panel/Examples/Filter",
-  component: FilterDrawer,
+  title: "Components/MudBlazor/MudDrawer",
+  component: MudDraw,
   decorators: [
     (Story) => (
-      <div style={{ minHeight: "500px" }}>
+      <div style={{ minWidth: "360px" }}>
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
         <Story />
       </div>
@@ -20,15 +21,11 @@ export default {
   },
 };
 
-export const Design = {
-  args: {
-    classes: "tr-docs--min-width",
-    results: 847,
-    open: true,
-  },
+export const MudDrawer = {
+  args: { open: true, classes: "tr-docs--min-width tr-docs--min-height-100" },
   render: (args) => (
-    <MudContainer classes={args.classes}>
-      <FilterDrawer {...args} />
-    </MudContainer>
+    <MudDraw {...args}>
+      <MudDrawerContent></MudDrawerContent>
+    </MudDraw>
   ),
 };

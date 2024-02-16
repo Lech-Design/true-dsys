@@ -1,0 +1,107 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import * as ReportStories from "../../../Drawers/DownloadReport.stories";
+import * as PageHeaderStories from "../../True/TruePageHeader.stories";
+import * as ActionHeaderStories from "./ActionPanelHeader.stories";
+
+<Meta title="Patterns/Action Panel" />
+
+# Introducing the Action Panel
+
+We've created the Action Panel to provide a consistent user experience for repeated
+actions. At it's heart it's a slide out Drawer with a collection of standard MudBlazor
+components.
+
+<Canvas of={ReportStories.Design} />
+<br />
+## How we invoke the Action Panel
+
+To maintain consistency throughout we have created a re-usable header component
+that can be inserted onto every page.
+
+View the True Header component [here](?path=/docs/design-system-components-true-page-header--docs)
+
+Within this component we define an action area where various CTA Buttons can be placed.
+For consistency Action Panel buttons are styled in "outlined" with a preceding icon. See the **"Download Report"** button in the example below.
+
+See below the markup for the TruePageHeader component:
+
+<Canvas of={PageHeaderStories.ForBillValidation} />
+<br />
+## Action Panel Anatomy
+
+The Action Panel is structure as follows:
+
+```js
+<MudDrawerRight>
+  <MudDrawerContent>
+    <MudGrid>
+      // The Header is always present
+      <ActionPanelHeader title="Download report" />
+      // Content is always placed between GridItemDrawer
+      <GridItemDrawer>(-- Content--)</GridItemDrawer>
+    </MudGrid>
+  </MudDrawerContent>
+</MudDrawerRight>
+```
+
+### MudDrawer
+
+MudDrawerRight is a decorator for MudDrawer with the following properties:
+
+```c
+// MudBlazor
+<MudDrawer @bind-Open="@openRight" Anchor="Anchor.Right" {other props} >
+    // Content
+</MudDrawer>
+```
+
+<br />
+### Action Panel Header
+
+<Canvas of={ActionHeaderStories.Header} />
+
+This Pattern uses the MudDrawerHeader component as a base, we have a made a reusable decorator TrueDrawerHeader that injects it with certain properties.
+
+Here's how the component is structured:
+
+```js
+<>
+  <TrueDrawerHeader classes="border-l-8 mud-border-primary align-center justify-space-between">
+    <MudTypography typo="h6" classes="mud-primary-text">
+      // Panel Title
+    </MudTypography>
+    <MudIconButton>(-- close icon --)</MudIconButton>
+  </TrueDrawerHeader>
+  <MudItem classes="mud-grid-item-xs-12">
+    <MudDivider />
+  </MudItem>
+</>
+```
+
+Notice the TrueDrawerHeader component, this is a decorator wrapping around MudDrawerHeader.
+Here is how it looks under the hood:
+
+```js
+// True Draw header
+<MudDrawerHeader classes={"mud-grid-item-xs-12 pl-4 pr-2 pt-2 pb-2"}>
+  {content}
+</MudDrawerHeader>
+```
+
+<br />
+### Action Panel Body
+
+We use the **_TrueItemDrawer_** decorator to arrange content in the body of the action Panel.
+
+```js
+<TrueItemDrawer>{content}</TrueItemDrawer>
+```
+
+Here's how that looks under the hood:
+
+```js
+// React
+<MudItem classes="mud-grid-item-xs-12 pl-6 pr-6 pt-8 pb-1">{content}</MudItem>
+```
+
+> **NOTE** The Action Panel is for user actions that interact with the application.

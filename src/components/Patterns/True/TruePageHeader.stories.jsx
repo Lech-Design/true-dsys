@@ -6,7 +6,7 @@ import MudButton from "@/components/Button/MudButton";
 import IconDownload from "@/components/Icons/Download";
 
 export default {
-  title: "Design System/Patterns/Templates/Page Header",
+  title: "patterns/Page Header",
   component: TruePageHeader,
   decorators: [
     (Story) => (

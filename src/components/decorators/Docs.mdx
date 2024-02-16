@@ -1,0 +1,36 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import * as TrueDrawerHeaderStories from "./TrueDrawerHeader.stories";
+
+<Meta title="Components/Decorators/Docs" />
+
+{/* <img className="sg-img" src="assets/soa_logo_crop.png" /> */}
+
+# Decorators
+
+<br />
+## What are Decorators?
+
+Decorators pre-populate existing MudBlazor components with a
+set of predefined properties and CSS utility classes.
+
+All decorators are prefixed with the word **True**, for example **_TruePaper_** or **_TrueDrawerHeader_**.
+
+Be defining a set of reusable decorator components, we can maintain greater consistency throught the app experience.
+
+<br />
+
+## Decorator list
+
+<br />
+### True Drawer Header
+
+<Canvas of={TrueDrawerHeaderStories.DrawerHeader} />
+
+How is looks under the hood:
+
+```js
+// React
+<MudDrawerHeader classes={"mud-grid-item-xs-12 pl-4 pr-2 pt-2 pb-2" + classes}>
+  {children}
+</MudDrawerHeader>
+```

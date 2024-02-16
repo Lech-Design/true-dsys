@@ -1,20 +1,18 @@
-import MudToolBar from "./MudToolBar";
+import TrueDrawerHeader from "./TrueDrawerHeader";
 
 export default {
-  title: "Components/MudBlazor/MudToolBar",
-  component: MudToolBar,
+  title: "Components/Decorators/Drawer Header",
+  component: TrueDrawerHeader,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ["autodocs"],
+  //  tags: ["autodocs"],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: "fullscreen",
   },
 };
 
-const Template = (args) => <MudToolBar {...args} />;
+const Template = (args) => <TrueDrawerHeader {...args} />;
 
-export const ToolBar = {
-  args: {
-    classes: "mud-toolbar",
-  },
+export const DrawerHeader = {
+  args: {},
 };

@@ -2,7 +2,7 @@ import MudSelect from "./MudSelect";
 import MudTypography from "../MudTypography/MudTypography";
 
 export default {
-  title: "Design System/Components/MudBlazor/Mud Input",
+  title: "Components/MudBlazor/Mud Input",
   component: MudSelect,
 
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs

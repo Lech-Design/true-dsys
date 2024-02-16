@@ -6,12 +6,20 @@
   font-size: 1rem !important;
 }
 
-[data-selected="true"] {
+.css-194spiq {
+  padding: 32px;
+}
+
+.css-huy9ac {
   border-radius: 50px !important;
 }
 
 .tr-docs--min-height {
   min-height: 700px;
+}
+
+.tr-docs--min-height-100 {
+  min-height: 100%;
 }
 
 .tr-docs--min-width {

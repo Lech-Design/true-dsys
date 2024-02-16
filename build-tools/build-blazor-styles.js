@@ -4,19 +4,21 @@ const baseTokenHash = {};
 const themeTokens = [];
 
 function ReadFolder() {
+  console.log("-------- Reading Folder");
   const fileList = fs.readdirSync("./src/styles/themes", { encoding: "utf8" });
   for (let i = 0; i < fileList.length; i++) {
+    console.log("-------- File found");
     let file = fs.readFileSync(`./src/styles/themes/${fileList[i]}`, "utf8");
     file = file.replace(":root {", "").replace("}", "").replace(/\s+/g, "");
     let tokenList = baseTokenHash;
     file = Array.from(new Set(file.split(";")));
     for (let t = 0; t < file.length; t++) {
-      console.log(file[t]);
+      // console.log(file[t]);
       let props = Array.from(new Set(file[t].split(":")));
+      // console.log(props[0]);
       if (i < 1) {
         baseTokenHash[props[0]] = props[1];
       } else if (/.*var.*/.test(props[1])) {
-        // console.log(props[1]);
         themeTokens.push(
           baseTokenHash[props[1].replace("var(", "").replace(")", "")]
         );
@@ -24,15 +26,17 @@ function ReadFolder() {
         themeTokens.push(props[1]);
       }
     }
-
-    // console.log(themeTokens);
-    MudBlazorTemplate(themeTokens);
   }
+  // console.log(themeTokens);
+  console.log("-------- Initiating transpiler");
+  console.log(themeTokens);
+  MudBlazorTemplate(themeTokens);
 }
 
 ReadFolder();
 
 function MudBlazorTemplate(tokens) {
+  // console.log(tokens);
   const theme = `Palette = new Palette() {
     Primary = ${tokens[0]},
     Secondary = ${tokens[1]},
