@@ -26,7 +26,7 @@ export default function DownloadReport(props) {
             </MudTypography>
 
             <MudChipSetSwitch
-              chipList={["Gas", "Power"]}
+              chipList={["Power", "Gas"]}
               filterValues={[0, 47, 500, 300]}
               color="dark"
               variant="text"

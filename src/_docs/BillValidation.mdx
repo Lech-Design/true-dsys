@@ -85,7 +85,7 @@ This is uses the MudChipSet component and is configure to work like Radio button
       </MudTypography>
 
       <MudChipSetSwitch
-        chipList={["Gas", "Power"]}
+        chipList={["Power", "Gas"]}
         filterValues={[0, 47, 500, 300]}
         color="dark"
         variant="text"
@@ -108,8 +108,13 @@ This is uses the MudChipSet component and is configure to work like Radio button
   </div>
   <div>
     <p>Chip 1</p>
+    <p>_Power_</p>
+    <p>Sets the energy type (context) of the report to power (Electricity).</p>
+  </div>
+  <div>
+    <p>Chip 2</p>
     <p>_Gas_</p>
-    <p>Sets the energy type (context) of the report.</p>
+    <p>Sets the energy type (context) of the report to gas.</p>
   </div>
 </div>
 
