@@ -29,79 +29,123 @@ See below the markup for the TruePageHeader component:
 <br />
 ## Action Panel Anatomy
 
+Checkout the design in MudBlazor [here](https://try.mudblazor.com/snippet/mYQyaQbCVoboXnkO)
+
 The Action Panel is structure as follows:
 
-```js
-<MudDrawerRight>
-  <MudDrawerContent>
-    <MudGrid>
-      // The Header is always present
-      <ActionPanelHeader title="Download report" />
-      // Content is always placed between GridItemDrawer
-      <GridItemDrawer>(-- Content--)</GridItemDrawer>
+```csharp
+@using static TrueActionHeader;
+@using static TrueActionItem;
+
+// Naughty Inline style (recommend to add some extra utility classes to set the width of the asides)
+<MudDrawer @bind-Open="@openRight" Anchor="Anchor.Right" style="width: 400px">
+    <MudGrid Spacing="0">
+        <!-- Header with Title -->
+        <TrueActionHeader>
+            Download Report
+        </TrueActionHeader>
+
+        <!-- Select a Meter type -->
+        <TrueActionItem>
+            <MudText Typo="Typo.body1" Class="pb-4">Select a Meter type:</MudText>
+            <MudChipSet Class="pb-6 d-flex flex-wrap gap-3">
+                <MudChip Variant="Variant.Text" Color="Color.Secondary" Class="ma-0">Power</MudChip>
+                <MudChip Variant="Variant.Text" Color="Color.Secondary" Class="ma-0">Gas</MudChip>
+            </MudChipSet>
+        </TrueActionItem>
+        <MudItem Class="mud-grid-item-xs-12 pl-6 pr-6">
+            <MudDivider />
+        </MudItem>
+
+        <!-- Choose a report -->
+        <TrueActionItem>
+            <MudText Typo="Typo.body1" Class="pb-4">Choose a report:</MudText>
+            <MudSelect T="string" @bind-Value="@report" Variant="Variant.Outlined" AnchorOrigin="Origin.BottomCenter" Class="pb-4">
+                <MudSelectItem Value="@("Exceptions")" />
+                <MudSelectItem Value="@("Pre-validation")" />
+                <MudSelectItem Value="@("Post-validation")" />
+            </MudSelect>
+        </TrueActionItem>
+
+        <!-- Download Button -->
+        <TrueActionItem>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary">Download my report</MudButton>
+        </TrueActionItem>
     </MudGrid>
-  </MudDrawerContent>
-</MudDrawerRight>
+</MudDrawer>
 ```
+
+<b />
 
 ### MudDrawer
 
-MudDrawerRight is a decorator for MudDrawer with the following properties:
+We use the standard MudDrawer component as a building block, notice the in-line style, this is for presentation.
 
-```c
-// MudBlazor
-<MudDrawer @bind-Open="@openRight" Anchor="Anchor.Right" {other props} >
+> Strongly recommended to add a width for the Action Panel as a custom CSS utility.
+
+```csharp
+<MudDrawer @bind-Open="@openRight" Anchor="Anchor.Right" style="width: 400px">
     // Content
 </MudDrawer>
 ```
 
 <br />
-### Action Panel Header
+### True Action Header
 
-<Canvas of={ActionHeaderStories.Header} />
+<Story of={ActionHeaderStories.Header} />
 
-This Pattern uses the MudDrawerHeader component as a base, we have a made a reusable decorator TrueDrawerHeader that injects it with certain properties.
+This Pattern uses the MudDrawerHeader component as a base, combined with MudTexta and MudDivider, here's how the component is structured in MudBlazor:
 
-Here's how the component is structured:
-
-```js
-<>
-  <TrueDrawerHeader classes="border-l-8 mud-border-primary align-center justify-space-between">
-    <MudTypography typo="h6" classes="mud-primary-text">
-      // Panel Title
-    </MudTypography>
-    <MudIconButton>(-- close icon --)</MudIconButton>
-  </TrueDrawerHeader>
-  <MudItem classes="mud-grid-item-xs-12">
-    <MudDivider />
-  </MudItem>
-</>
-```
-
-Notice the TrueDrawerHeader component, this is a decorator wrapping around MudDrawerHeader.
-Here is how it looks under the hood:
-
-```js
-// True Draw header
-<MudDrawerHeader classes={"mud-grid-item-xs-12 pl-4 pr-2 pt-2 pb-2"}>
-  {content}
+```csharp
+<MudDrawerHeader UserAttributes="UserAttributes" Class="@Class">
+    <MudText Typo="Typo.h6" Color="Color.Primary">
+        @ChildContent
+    </MudText>
+    <MudIconButton Variant="Variant.Text" Icon="@Icons.Material.Filled.Close" aria-label="Close"></MudIconButton>
 </MudDrawerHeader>
+<MudItem Class="mud-grid-item-xs-12">
+    <MudDivider/>
+</MudItem>
+
+@code {
+    [Parameter]
+    public string Class {get; set;} = "mud-grid-item-xs-12 pl-4 pr-2 pt-2 pb-2 border-l-8 mud-border-primary align-center justify-space-between";
+
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+
+    [Parameter]
+    public Dictionary<string,object> UserAttributes {get; set;}
+}
 ```
 
 <br />
 ### Action Panel Body
 
-We use the **_TrueItemDrawer_** decorator to arrange content in the body of the action Panel.
+We use the **_TrueActionItem_** as a decorator to arrange content in the body of the action Panel.
 
-```js
-<TrueItemDrawer>{content}</TrueItemDrawer>
+```xml
+<TrueActionItem>{Content}</TrueActionItem>
 ```
 
-Here's how that looks under the hood:
+Here's how this decorator is structured in MudBlazor:
 
-```js
-// React
-<MudItem classes="mud-grid-item-xs-12 pl-6 pr-6 pt-8 pb-1">{content}</MudItem>
+```csharp
+<MudItem Class="@Class" UserAttributes="UserAttributes">
+    @ChildContent
+</MudItem>
+
+@code {
+    [Parameter]
+    public string Class {get; set;} = "mud-grid-item-xs-12 pl-6 pr-6 pt-8 pb-1";
+
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+
+    [Parameter]
+    public Dictionary<string,object> UserAttributes {get; set;}
+}
+
 ```
 
 > **NOTE** The Action Panel is for user actions that interact with the application.

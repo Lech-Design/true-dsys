@@ -1,0 +1,20 @@
+<MudDrawerHeader UserAttributes="UserAttributes" Class="@Class">
+    <MudText Typo="Typo.h6" Color="Color.Primary">
+        @ChildContent
+    </MudText>
+    <MudIconButton Variant="Variant.Text" Icon="@Icons.Material.Filled.Close" aria-label="Close"></MudIconButton>
+</MudDrawerHeader>
+<MudItem Class="mud-grid-item-xs-12">
+    <MudDivider/>
+</MudItem>
+
+@code {
+    [Parameter]
+    public string Class {get; set;} = "mud-grid-item-xs-12 pl-4 pr-2 pt-2 pb-2 border-l-8 mud-border-primary align-center justify-space-between";
+
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+
+    [Parameter]
+    public Dictionary<string,object> UserAttributes {get; set;}
+}

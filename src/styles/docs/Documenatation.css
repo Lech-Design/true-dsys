@@ -46,3 +46,32 @@
 .tr-docs-background-grey {
   background-color: #ddd;
 }
+
+.tr-docs-table {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.tr-docs-table > * {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #bbb;
+}
+
+.tr-docs-table > *:first-child {
+  font-weight: 800;
+}
+
+.tr-docs-table > * > * {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 32px;
+  margin: 0 !important;
+  flex: 1 1 0;
+  border-right: 1px solid #bbb;
+}
+
+.tr-docs-table > * > *:last-child {
+  border: none;
+}

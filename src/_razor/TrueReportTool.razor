@@ -1,0 +1,40 @@
+@using static TrueActionHeader;
+@using static TrueActionItem;
+
+<MudDrawer @bind-Open="@openRight" Anchor="Anchor.Right" style="width: 400px">
+    <MudGrid Spacing="0">
+        <!-- Header with Title -->
+        <TrueActionHeader>
+            Download Report
+        </TrueActionHeader>
+        <!-- Select a Meter type -->
+        <TrueActionItem>
+            <MudText Typo="Typo.body1" Class="pb-4">Select a Meter type:</MudText>
+            <MudChipSet Class="pb-6 d-flex flex-wrap gap-3">
+                <MudChip Variant="Variant.Text" Color="Color.Secondary" Class="ma-0">Power</MudChip>
+                <MudChip Variant="Variant.Text" Color="Color.Secondary" Class="ma-0">Gas</MudChip>
+            </MudChipSet>
+        </TrueActionItem>
+        <MudItem Class="mud-grid-item-xs-12 pl-6 pr-6">
+            <MudDivider />
+        </MudItem>
+        <!-- Choose a report -->
+        <TrueActionItem>
+            <MudText Typo="Typo.body1" Class="pb-4">Choose a report:</MudText>
+            <MudSelect T="string" @bind-Value="@report" Variant="Variant.Outlined" AnchorOrigin="Origin.BottomCenter" Class="pb-4">
+                <MudSelectItem Value="@("Exceptions")" />
+                <MudSelectItem Value="@("Pre-validation")" />
+                <MudSelectItem Value="@("Post-validation")" />
+            </MudSelect>
+        </TrueActionItem>
+        <!-- Download Button -->
+        <TrueActionItem>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary">Download my report</MudButton>
+        </TrueActionItem>
+    </MudGrid>
+</MudDrawer>
+
+@code {
+    public bool openRight {get; set;} = true;
+    public string report="Exceptions";
+}

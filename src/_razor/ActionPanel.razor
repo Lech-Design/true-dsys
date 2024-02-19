@@ -1,0 +1,34 @@
+@using static TrueActionHeader;
+@using static TrueActionItem;
+
+<MudDrawer @bind-Open="@openRight" Anchor="Anchor.Right" style="width: 400px">
+    <MudGrid Spacing="0">
+        <TrueActionHeader>
+            Download Report
+        </TrueActionHeader>
+
+        <TrueActionItem>
+            <MudText Typo="Typo.body1" Class="pb-4">Select a Meter type:</MudText>
+            <MudChipSet Class="pb-6 d-flex flex-wrap gap-3">
+                <MudChip Variant="Variant.Text" Color="Color.Secondary" Class="ma-0">Power</MudChip>
+                <MudChip Variant="Variant.Text" Color="Color.Secondary" Class="ma-0">Gas</MudChip>
+            </MudChipSet>
+        </TrueActionItem>
+        <MudItem Class="mud-grid-item-xs-12 pl-6 pr-6">
+            <MudDivider />
+        </MudItem>
+        <TrueActionItem>
+            <MudText Typo="Typo.body1" Class="pb-4">Choose a report:</MudText>
+            <MudSelect T="string" @bind-Value="@report" Variant="Variant.Outlined" AnchorOrigin="Origin.BottomCenter">
+                <MudSelectItem Value="@("Exceptions")" />
+                <MudSelectItem Value="@("Pre-validation")" />
+                <MudSelectItem Value="@("Post-validation")" />
+            </MudSelect>
+        </TrueActionItem>
+    </MudGrid>
+</MudDrawer>
+
+@code {
+    public bool openRight {get; set;} = true;
+    string report="Exceptions";
+}

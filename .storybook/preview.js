@@ -1,3 +1,8 @@
+import { SyntaxHighlighter } from "@storybook/components/dist";
+import csharp from "react-syntax-highlighter/dist/esm/languages/prism/csharp";
+
+SyntaxHighlighter.registerLanguage("csharp", csharp);
+
 /** @type { import('@storybook/react').Preview } */
 
 import "../src/styles/docs/theme-tokens-docs.css";

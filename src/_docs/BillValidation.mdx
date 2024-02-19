@@ -4,6 +4,7 @@ import IconDownload from "@/components/Icons/Download";
 import TrueItemDrawer from "@/components/decorators/TrueItemDrawer";
 import MudChipSetSwitch from "@/components/MudInput/MudChipsetSwitch";
 import MudTypography from "@/components/MudTypography/MudTypography";
+import MudSelect from "@/components/MudInput/MudSelect";
 
 import * as PageHeaderStories from "../components/Patterns/True/TruePageHeader.stories";
 import * as ReportStories from "../components/Drawers/DownloadReport.stories";
@@ -11,7 +12,7 @@ import * as BillValStories from "../components/Patterns/Content/BillValidation/B
 
 {/* <Meta of={BillValStories} /> */}
 
-<Meta title="Features/Bill Validation/Docs" />
+<Meta title="Features/Bill Validation/Downloading a report" />
 
 {/* <img className="sg-img" src="assets/soa_logo_crop.png" /> */}
 
@@ -23,6 +24,17 @@ To ensure consistency throughout the app and to avoid developers re-inventing th
 designed a reusable pattern we call the **Action Panel**.
 
 <br />
+## Table of Contents
+
+- [The Action Panel](#the-action-panel)
+- [How the download tool works](#the-action-panel)
+- [Step 1 - Accessing the download tool](#step-1---accessing-the-download-tool)
+- [Step 2 - Choosing the Meter type](#step-2---choosing-the-meter-type-power-or-gas)
+  - [Text strings and labels](#text-string-labels)
+- [Step 3 - Selecting the type of report to Download](#step-3---selecting-the-type-of-report-to-download)
+  - [Text strings and labels](#text-string-labels-1)
+
+<br />
 ## The Action Panel
 
 <Canvas of={ReportStories.Design} />
@@ -31,6 +43,10 @@ As the name suggests this a Panel to provde consistent user actions throughout t
 
 The Reporting Tool is a specific variation of this Pattern, it is strongly recommended to
 familiarise yourself with the specs and design of the [Action Panel](?path=/docs/patterns-action-panel--docs).
+
+The contents of the Action Panel are dynamic and are populated depending on the context of a specific feature.
+
+For the reporting tool in Bill Validation we allow the user to configure 2 options:
 
 > Check out the **Action** Panel [here](?path=/docs/patterns-action-panel--docs)
 
@@ -51,35 +67,109 @@ On the main page of Bill Validation a Download Report button is present:
     Download report
   </MudButton>
 </Unstyled>
-<br />
-### Step 2 - Using the Download tool
-
-The contents of the Action Panel are dynamic and are populated depending on the context of a specific feature.
-
-For Bill Validation we allow the user to configure 2 options:
 
 <br />
+### Step 2 - Choosing the Meter type (Power or Gas)
 
-1- Choosing the Meter type (Power or Gas)
+This is uses the MudChipSet component and is configure to work like Radio buttons (single selection).
 
-- This is uses the MudChipSet component and is configure to work like Radio buttons (single selection).
+> #### Initial state
+>
+> To avoid unnecessary clicks the first option is pre-selected
 
+<br/>
+<div style={{background: "#FFF", padding: "2em", maxWidth: "400px", marginBottom: "2rem"}}>
+
+      <MudTypography typo="body1" classes="pb-4">
+        Select a Meter type:
+      </MudTypography>
+
+      <MudChipSetSwitch
+        chipList={["Gas", "Power"]}
+        filterValues={[0, 47, 500, 300]}
+        color="dark"
+        variant="text"
+      />
+
+</div>
+
+<br />
+#### Text string labels
+<div className="tr-docs-table">
+  <div>
+    <p>Element</p>
+    <p>_String value_</p>
+    <p>Description</p>
+  </div>
+  <div>
+    <p>Title</p>
+    <p>_Select a Meter type_</p>
+    <p>Informs the user of the first action they need to take.</p>
+  </div>
+  <div>
+    <p>Chip 1</p>
+    <p>_Gas_</p>
+    <p>Sets the energy type (context) of the report.</p>
+  </div>
+</div>
+
+<br />
+### Step 3 - Selecting the type of report to Download
+
+This uses a MudSelect component configured with the **_outlined_** property.
+
+> #### Initial state
+>
+> To avoid unnecessary clicks the first option is pre-selected
+
+<br/>
 <div style={{background: "#FFF", padding: "2em", maxWidth: "400px"}}>
 
-    <MudTypography typo="body1" classes="pb-4">
-      Select a Meter type:
-    </MudTypography>
+{" "}
 
-    <MudChipSetSwitch
-      chipList={["Gas", "Power"]}
-      filterValues={[0, 47, 500, 300]}
-      color="dark"
-      variant="text"
-    />
+<MudTypography typo="body1" classes="pb-3">
+  Choose a report:
+</MudTypography>
+<MudSelect
+  classes="pb-4"
+  label=""
+  helper=""
+  items={["Exceptions", "Pre-validation", "Post-validation"]}
+  dense={false}
+  variant="outlined"
+>
+  Power
+</MudSelect>
 
 </div>
 <br/>
 
-- Selecting the type of report to Download
+#### Text string labels
 
-  - This uses a MudSelect component configured with the **_outlined_** property.
+<div className="tr-docs-table">
+  <div>
+    <p>Element</p>
+    <p>_String value_</p>
+    <p>Description</p>
+  </div>
+  <div>
+    <p>Title</p>
+    <p>_Choose a report_</p>
+    <p>Informs the user of the second action they need to take.</p>
+  </div>
+  <div>
+    <p>Select item 1</p>
+    <p>_Exceptions_</p>
+    <p>This provides a report on bills with exceptions .</p>
+  </div>
+  <div>
+    <p>Select item 2</p>
+    <p>_Pre-validated_</p>
+    <p>This provides a report on bills thats have been pre-validated.</p>
+  </div>
+  <div>
+    <p>Select item 3</p>
+    <p>_Post-validated_</p>
+    <p>This provides a report on bills thats have been post-validated.</p>
+  </div>
+</div>
