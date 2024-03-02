@@ -7,7 +7,7 @@ SyntaxHighlighter.registerLanguage("csharp", csharp);
 
 import "../src/styles/docs/theme-tokens-docs.css";
 import "../src/styles/MudBlazor.css";
-import "../src/styles/docs/Documenatation.css";
+import "../src/styles/docs/Documentation.css";
 import "../src/styles/themes/global-tokens.css";
 import "../src/styles/style.css";
 import "../src/styles/Site.css";
@@ -38,9 +38,6 @@ const preview = {
     stylesheetToggle: {
       OEM_2023: "/themes/global-tokens.css",
       OEM_2024: "/testing/global-tokens_theme2.css",
-    },
-    designToken: {
-      disable: true,
     },
   },
 };

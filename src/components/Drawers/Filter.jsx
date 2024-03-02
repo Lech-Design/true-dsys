@@ -3,7 +3,7 @@ import MudItem from "../Layout/MudItem";
 import TrueItemDrawer from "../decorators/TrueItemDrawer";
 
 import MudDatePicker from "../MudInput/MudDatePicker";
-import MudTypography from "../MudTypography/MudTypography";
+import MudTypography from "../MudText/MudTypography";
 import MudDrawRight from "../MudDrawer/MudDrawerRight";
 import MudButton from "../Button/MudButton";
 

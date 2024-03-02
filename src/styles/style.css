@@ -208,7 +208,7 @@
   --mud-typography-button-weight: 500;
   --mud-typography-button-lineheight: 1.75;
   --mud-typography-button-letterspacing: 0.02857em;
-  --mud-typography-button-text-transform: uppercase;
+  --mud-typography-button-text-transform: none;
   --mud-typography-caption-family: var(--tr-font--family-primary);
   --mud-typography-caption-size: 0.75rem;
   --mud-typography-caption-weight: 400;

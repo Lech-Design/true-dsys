@@ -1,7 +1,7 @@
 import TruePageHeader from "./TruePageHeader";
 import MudGrid from "@/components/Layout/MudGrid";
 import MudItem from "@/components/Layout/MudItem";
-import MudTypography from "@/components/MudTypography/MudTypography";
+import MudTypography from "@/components/MudText/MudTypography";
 import MudButton from "@/components/Button/MudButton";
 import IconDownload from "@/components/Icons/Download";
 

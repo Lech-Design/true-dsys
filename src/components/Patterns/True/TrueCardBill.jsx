@@ -1,5 +1,5 @@
 import MudCard from "@/components/MudCard/MudCard";
-import MudTypography from "@/components/MudTypography/MudTypography";
+import MudTypography from "@/components/MudText/MudTypography";
 import MudCardContent from "@/components/MudCard/MudCardContent";
 
 export default function TrueCardBill(props) {

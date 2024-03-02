@@ -1,0 +1,493 @@
+let tokenList = [
+  { title: "Base tokens" },
+  {
+    name: "--tr-color--interaction-primary",
+    value: "rgba(0,178,255,1)",
+  },
+  {
+    name: "--tr-color--interaction-secondary",
+    value: "rgba(0,0,0,1)",
+  },
+  {
+    name: "--tr-color--interaction-teriary",
+    value: "rgba(235,81,129,1)",
+  },
+  {
+    name: "--tr-color--background-200",
+    value: "#f7f8fc",
+  },
+  {
+    name: "--tr-color--background-dark-100",
+    value: "rgba(0,0,0,1)",
+  },
+  {
+    name: "--tr-color--background-100",
+    value: "rgba(255,255,255,1)",
+  },
+  {
+    name: "--tr-color--text-primary-200",
+    value: "rgba(0,0,0,0.7)",
+  },
+  {
+    name: "--tr-color--success",
+    value: "rgba(90,197,97,1)",
+  },
+  {
+    name: "--tr-color--text-dark",
+    value: "rgba(74,74,74,1)",
+  },
+  {
+    name: "--tr-color--error",
+    value: "rgba(225,82,65,1)",
+  },
+  {
+    name: "--tr-color--info",
+    value: "rgba(96,197,167,1)",
+  },
+  {
+    name: "--tr-color--warning",
+    value: "rgba(241,157,56,1)",
+  },
+  {
+    name: "--tr-color--text-primary-100",
+    value: "rgba(0,0,0,1)",
+  },
+  {
+    name: "--tr-border--radius-regular",
+    value: "0.5rem",
+  },
+  {
+    name: "--tr-border--radius-medium",
+    value: "1rem",
+  },
+  {
+    name: "--tr-border--radius-large",
+    value: "1.5rem",
+  },
+  {
+    name: "--tr-border--radius-xl",
+    value: "2rem",
+  },
+  {
+    name: "--tr-font--family-primary",
+    value: '"OpenSans,Helvetica","Verdana","Arial","sans-serif"',
+  },
+  {
+    name: "--tr-font--family-secondary",
+    value: '"OpenSans","Helvetica","Arial","sans-serif"',
+  },
+  {
+    name: "--tr-font--size-xs",
+    value: "0.5rem",
+  },
+  {
+    name: "--tr-font--size-subtitle2",
+    value: "0.875rem",
+  },
+  {
+    name: "--tr-font--size-caption",
+    value: "0.75rem",
+  },
+  {
+    name: "--tr-font--size-body2",
+    value: "0.875rem",
+  },
+  {
+    name: "--tr-font--size-button",
+    value: "0.875rem",
+  },
+  {
+    name: "--tr-font--size-regular",
+    value: "1rem",
+  },
+  {
+    name: "--tr-font--size-h6",
+    value: "1.25rem",
+  },
+  {
+    name: "--tr-font--size-h5",
+    value: "1.5rem",
+  },
+  {
+    name: "--tr-font--size-h4",
+    value: "2rem",
+  },
+  {
+    name: "--tr-font--size-h3",
+    value: "2.25rem",
+  },
+  {
+    name: "--tr-font--size-h2",
+    value: "2.5rem",
+  },
+  {
+    name: "--tr-font--size-h1",
+    value: "3rem",
+  },
+  {
+    name: "--tr-spacing--025",
+    value: "0.25rem",
+  },
+  {
+    name: "--tr-spacing--050",
+    value: "0.5rem",
+  },
+  {
+    name: "--tr-spacing--100",
+    value: "1rem",
+  },
+  {
+    name: "--tr-spacing--125",
+    value: "1.25rem",
+  },
+  {
+    name: "--tr-spacing--150",
+    value: "1.5rem",
+  },
+  {
+    name: "--tr-spacing--175",
+    value: "1.75rem",
+  },
+  {
+    name: "--tr-spacing--200",
+    value: "2rem",
+  },
+  {
+    name: "--tr-spacing--250",
+    value: "2.5rem",
+  },
+  {
+    name: "--tr-spacing--300",
+    value: "3rem",
+  },
+  {
+    name: "--tr-spacing--400",
+    value: "4rem",
+  },
+  {
+    name: "--tr-font-weight-200",
+    value: "200",
+  },
+  {
+    name: "--tr-font-weight-300",
+    value: "300",
+  },
+  {
+    name: "--tr-font-weight-400",
+    value: "400",
+  },
+  {
+    name: "--tr-font-weight-500",
+    value: "500",
+  },
+  {
+    name: "--tr-font-weight-600",
+    value: "600",
+  },
+  {
+    name: "--tr-font-weight-700",
+    value: "700",
+  },
+  {
+    name: "--tr-font-weight-800",
+    value: "800",
+  },
+  { title: "MudBlazor tokens" },
+  {
+    name: "--mud-palette-primary",
+    value: "var(--tr-color--interaction-primary)",
+  },
+  {
+    name: "--mud-palette-secondary",
+    value: "var(--tr-color--interaction-secondary)",
+  },
+  {
+    name: "--mud-palette-tertiary",
+    value: "var(--tr-color--interaction-teriary)",
+  },
+  {
+    name: "--mud-palette-background",
+    value: "var(--tr-color--background-200)",
+  },
+  {
+    name: "--mud-palette-appbar-background",
+    value: "var(--tr-color--background-dark-100)",
+  },
+  {
+    name: "--mud-palette-drawer-background",
+    value: "var(--tr-color--background-100)",
+  },
+  {
+    name: "--mud-palette-drawer-text",
+    value: "var(--tr-color--text-primary-200)",
+  },
+  {
+    name: "--mud-palette-success",
+    value: "var(--tr-color--success)",
+  },
+  {
+    name: "--mud-palette-dark",
+    value: "var(--tr-color--text-dark)",
+  },
+  {
+    name: "--mud-palette-error",
+    value: "var(--tr-color--error)",
+  },
+  {
+    name: "--mud-palette-info",
+    value: "var(--tr-color--info)",
+  },
+  {
+    name: "--mud-palette-warning",
+    value: "var(--tr-color--warning)",
+  },
+  {
+    name: "--mud-palette-text-primary",
+    value: "var(--tr-color--text-primary-100)",
+  },
+  {
+    name: "--mud-default-borderradius",
+    value: "var(--tr-border--radius-regular)",
+  },
+  {
+    name: "--mud-typography-default-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-default-size",
+    value: "var(--tr-font--size-body2)",
+  },
+  {
+    name: "--mud-typography-default-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-default-lineheight",
+    value: "1.43",
+  },
+  {
+    name: "--mud-typography-default-letterspacing",
+    value: "0.01071em",
+  },
+  {
+    name: "--mud-typography-h1-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-h1-size",
+    value: "var(--tr-font--size-h1)",
+  },
+  {
+    name: "--mud-typography-h1-weight",
+    value: "300",
+  },
+  {
+    name: "--mud-typography-h1-lineheight",
+    value: "1.167",
+  },
+  {
+    name: "--mud-typography-h1-letterspacing",
+    value: "-0.01562em",
+  },
+  {
+    name: "--mud-typography-h2-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-h2-size",
+    value: "var(--tr-font--size-h2)",
+  },
+  {
+    name: "--mud-typography-h2-weight",
+    value: "300",
+  },
+  {
+    name: "--mud-typography-h2-lineheight",
+    value: "1.2",
+  },
+  {
+    name: "--mud-typography-h2-letterspacing",
+    value: "-0.00833em",
+  },
+  {
+    name: "--mud-typography-h3-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-h3-size",
+    value: "var(--tr-font--size-h3)",
+  },
+  {
+    name: "--mud-typography-h3-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-h3-lineheight",
+    value: "1.167",
+  },
+  {
+    name: "--mud-typography-h3-letterspacing",
+    value: "0",
+  },
+  {
+    name: "--mud-typography-h4-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-h4-size",
+    value: "var(--tr-font--size-h4)",
+  },
+  {
+    name: "--mud-typography-h4-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-h4-lineheight",
+    value: "1.235",
+  },
+  {
+    name: "--mud-typography-h4-letterspacing",
+    value: "0.00735em",
+  },
+  {
+    name: "--mud-typography-h5-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-h5-size",
+    value: "var(--tr-font--size-h5)",
+  },
+  {
+    name: "--mud-typography-h5-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-h5-lineheight",
+    value: "1.334",
+  },
+  {
+    name: "--mud-typography-h5-letterspacing",
+    value: "0",
+  },
+  {
+    name: "--mud-typography-h6-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-h6-size",
+    value: "var(--tr-font--size-h6)",
+  },
+  {
+    name: "--mud-typography-h6-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-h6-lineheight",
+    value: "1.6",
+  },
+  {
+    name: "--mud-typography-h6-letterspacing",
+    value: "0.0075em",
+  },
+  {
+    name: "--mud-typography-button-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-button-size",
+    value: "var(--tr-font--size-button)",
+  },
+  {
+    name: "--mud-typography-button-weight",
+    value: "500",
+  },
+  {
+    name: "--mud-typography-button-lineheight",
+    value: "20px",
+  },
+  {
+    name: "--mud-typography-button-letterspacing",
+    value: "0.02857em",
+  },
+  {
+    name: "--mud-typography-body1-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-body1-size",
+    value: "var(--tr-font--size-regular)",
+  },
+  {
+    name: "--mud-typography-body1-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-body1-lineheight",
+    value: "1.5",
+  },
+  {
+    name: "--mud-typography-body1-letterspacing",
+    value: "0.00938em",
+  },
+  {
+    name: "--mud-typography-body2-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-body2-size",
+    value: "var(--tr-font--size-body2)",
+  },
+  {
+    name: "--mud-typography-body2-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-body2-lineheight",
+    value: "1.43",
+  },
+  {
+    name: "--mud-typography-body2-letterspacing",
+    value: "0.01071em",
+  },
+  {
+    name: "--mud-typography-caption-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-caption-size",
+    value: "var(--tr-font--size-caption)",
+  },
+  {
+    name: "--mud-typography-caption-weight",
+    value: "400",
+  },
+  {
+    name: "--mud-typography-caption-lineheight",
+    value: "1.66",
+  },
+  {
+    name: "--mud-typography-caption-letterspacing",
+    value: "0.03333em",
+  },
+  {
+    name: "--mud-typography-subtitle2-family",
+    value: "var(--tr-font--family-primary)",
+  },
+  {
+    name: "--mud-typography-subtitle2-size",
+    value: "var(--tr-font--size-subtitle2)",
+  },
+  {
+    name: "--mud-typography-subtitle2-weight",
+    value: "500",
+  },
+  {
+    name: "--mud-typography-subtitle2-lineheight",
+    value: "1.57",
+  },
+  {
+    name: "--mud-typography-subtitle2-letterspacing",
+    value: "0.00714em",
+  },
+];
+export default tokenList;

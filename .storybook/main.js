@@ -11,7 +11,6 @@ const config = {
     "@whitespace/storybook-addon-html",
     "storybook-addon-pseudo-states",
     "@stevendejong/storybook-stylesheet-toggle",
-    { name: "storybook-design-token", options: { preserveCSSVars: false } },
   ],
   webpackFinal: async (config, { configType }) => {
     config.resolve.modules = [path.resolve(__dirname, ".."), "node_modules"];

@@ -1,7 +1,7 @@
 import MudGrid from "./MudGrid";
 import MudItem from "./MudItem";
 import DummyBlock from "../DummyContent/DummyBlock";
-import MudTypography from "../MudTypography/MudTypography";
+import MudTypography from "../MudText/MudTypography";
 
 export default {
   title: "Components/MudBlazor/Mud Grid/Grid",

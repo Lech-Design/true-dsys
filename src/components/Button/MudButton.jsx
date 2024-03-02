@@ -1,5 +1,5 @@
 export default function MudButton(props) {
-  let { children } = props;
+  let { children, color } = props;
   let Icon = props.icon;
   let size = props.size ? props.size : "medium";
   let style = "";
@@ -20,6 +20,8 @@ export default function MudButton(props) {
     case "text":
       style = `mud-button-root mud-button mud-button-text mud-button-text-default mud-button-text-size-${size} mud-ripple`;
       break;
+    default:
+      style = `mud-button-root mud-button mud-button-text mud-button-text-${color} mud-button-text-size-${size} mud-ripple`;
   }
 
   return (

@@ -7,6 +7,7 @@ import MudAlert from "@/components/MudAlert/MudAlert";
 import TrueCardBill from "../True/TrueCardBill";
 import IconDownload from "@/components/Icons/Download";
 import DownloadReport from "@/components/Drawers/DownloadReport";
+import BarChart from "@/components/_templates/BarChart";
 
 import { useState } from "react";
 
@@ -47,6 +48,25 @@ export default function DummyPage(props) {
               Download report
             </MudButton>
           </TruePageHeader>
+
+          <BarChart
+            items={[
+              { label: "Jan", value: 20000 },
+              { label: "Feb", value: 30000 },
+              { label: "March", value: 80000 },
+              { label: "April", value: 12340 },
+              { label: "May", value: 21129 },
+              { label: "June", value: 32129 },
+              { label: "July", value: 55556 },
+              { label: "Aug", value: 58237 },
+              { label: "Sept", value: 46820 },
+              { label: "Oct", value: 300 },
+              { label: "Nov", value: 347 },
+              { label: "Dec", value: 234 },
+            ]}
+            height={400}
+          />
+
           <MudItem classes="mud-grid-item-xs-12">
             <MudGrid classes="mud-grid-spacing-xs-3">
               <MudItem classes="mud-grid-item-xs-6 mud-grid-item-sm-3">

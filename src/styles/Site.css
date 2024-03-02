@@ -100,10 +100,6 @@
 
 /* Custom utilities */
 
-.border-left-thick {
-  border-left: 0.5rem solid var(--mud-palette-primary);
-}
-
 .tr-tool-drawer--min-width {
   min-width: 360px;
 }

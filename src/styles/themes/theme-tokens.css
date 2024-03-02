@@ -12,7 +12,7 @@
   --mud-palette-info: var(--tr-color--info);
   --mud-palette-warning: var(--tr-color--warning);
   --mud-palette-text-primary: var(--tr-color--text-primary-100);
-  --mud-default-border-radius: var(--tr-border--radius-regular);
+  --mud-default-borderradius: var(--tr-border--radius-regular);
   --mud-typography-default-family: var(--tr-font--family-primary);
   --mud-typography-default-size: var(--tr-font--size-body2);
   --mud-typography-default-weight: 400;

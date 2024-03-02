@@ -3,6 +3,7 @@ import MudContent from "@/components/MudContent/MudContent";
 import MudLayout from "@/components/Layout/MudLayout";
 import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
 import EmissionsPage from "../Content/EmissionsPage";
+import DashboardTemplate from "../Dashboard/DashboardTemplate";
 import DummyPage from "./DummyPage";
 import MudNavMenu from "@/components/MudNavMenu/MudNavMenu";
 
@@ -19,7 +20,8 @@ export default function PageTemplate(props) {
       <MudContent>
         <MudToolBar />
         {/* <EmissionsPage /> */}
-        <DummyPage />
+        {/* <DummyPage /> */}
+        <DashboardTemplate />
       </MudContent>
     </MudLayout>
   );

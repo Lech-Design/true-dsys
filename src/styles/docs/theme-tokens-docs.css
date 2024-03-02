@@ -21,7 +21,7 @@
   * @tokens Border
   * @presenter BorderRadius
   */
-  --mud-default-border-radius: var(--tr-border--radius-regular);
+  --mud-default-borderradius: var(--tr-border--radius-regular);
 
   /**
   * @tokens Font Family

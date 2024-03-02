@@ -1,6 +1,6 @@
 import TrueDrawerHeader from "@/components/decorators/TrueDrawerHeader";
 import MudGrid from "@/components/Layout/MudGrid";
-import MudTypography from "@/components/MudTypography/MudTypography";
+import MudTypography from "@/components/MudText/MudTypography";
 import MudIconButton from "@/components/Button/MudIconButton";
 import IconClose from "@/components/Icons/Close";
 import MudItem from "@/components/Layout/MudItem";

@@ -1,7 +1,7 @@
 import MudGrid from "@/components/Layout/MudGrid";
 
 import MudItem from "@/components/Layout/MudItem";
-import MudTypography from "@/components/MudTypography/MudTypography";
+import MudTypography from "@/components/MudText/MudTypography";
 
 export default function TruePageHeader(props) {
   let { children, title, description } = props;

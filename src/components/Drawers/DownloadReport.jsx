@@ -2,7 +2,7 @@ import MudGrid from "../Layout/MudGrid";
 import MudItem from "../Layout/MudItem";
 import TrueItemDrawer from "../decorators/TrueItemDrawer";
 import MudSelect from "../MudInput/MudSelect";
-import MudTypography from "../MudTypography/MudTypography";
+import MudTypography from "../MudText/MudTypography";
 import MudDrawRight from "../MudDrawer/MudDrawerRight";
 import MudButton from "../Button/MudButton";
 import MudDivider from "../Layout/MudDivider";

@@ -12,7 +12,7 @@ import MudTabs from "@/components/MudTabs/MudTabs";
 import DownloadReport from "@/components/Drawers/DownloadReport";
 import FilterDrawer from "@/components/Drawers/Filter";
 
-import MudTypography from "@/components/MudTypography/MudTypography";
+import MudTypography from "@/components/MudText/MudTypography";
 
 export default function ExamplePage(props) {
   return (

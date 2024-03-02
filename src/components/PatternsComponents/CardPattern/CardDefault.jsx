@@ -5,7 +5,7 @@ import MudCardHeaderContent from "@/components/MudCard/MudCardHeaderContent";
 import MudCardHeaderActions from "@/components/MudCard/MudCardHeaderActions";
 import MudCardContent from "@/components/MudCard/MudCardContent";
 import MudCardActions from "@/components/MudCard/MudCardActions";
-import MudTypography from "@/components/MudTypography/MudTypography";
+import MudTypography from "@/components/MudText/MudTypography";
 import MudPaper from "@/components/Layout/MudPaper";
 
 import DummyTitle from "@/components/DummyContent/DummyTitle";

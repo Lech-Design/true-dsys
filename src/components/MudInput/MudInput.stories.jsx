@@ -1,5 +1,5 @@
 import MudSelect from "./MudSelect";
-import MudTypography from "../MudTypography/MudTypography";
+import MudTypography from "../MudText/MudTypography";
 
 export default {
   title: "Components/MudBlazor/Mud Input",

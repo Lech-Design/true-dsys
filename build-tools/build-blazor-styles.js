@@ -2,6 +2,7 @@ const fs = require("fs");
 
 const baseTokenHash = {};
 const themeTokens = [];
+const tokenList = {};
 
 function ReadFolder() {
   console.log("-------- Reading Folder");
@@ -10,12 +11,13 @@ function ReadFolder() {
     console.log("-------- File found");
     let file = fs.readFileSync(`./src/styles/themes/${fileList[i]}`, "utf8");
     file = file.replace(":root {", "").replace("}", "").replace(/\s+/g, "");
-    let tokenList = baseTokenHash;
+
     file = Array.from(new Set(file.split(";")));
     for (let t = 0; t < file.length; t++) {
       // console.log(file[t]);
       let props = Array.from(new Set(file[t].split(":")));
       // console.log(props[0]);
+
       if (i < 1) {
         baseTokenHash[props[0]] = props[1];
       } else if (/.*var.*/.test(props[1])) {
@@ -25,14 +27,21 @@ function ReadFolder() {
       } else {
         themeTokens.push(props[1]);
       }
+      tokenList[props[0]] = {
+        name: props[0],
+        value: props[1],
+      };
     }
   }
   // console.log(themeTokens);
   console.log("-------- Initiating transpiler");
-  console.log(themeTokens);
-  MudBlazorTemplate(themeTokens);
-}
+  console.log(tokenList);
+  let jsonTokens = JSON.stringify(tokenList, null, 2);
+  fs.writeFileSync(`./build-tools/tokens.json`, jsonTokens);
 
+  // return baseTokenHash;
+  // MudBlazorTemplate(themeTokens);
+}
 ReadFolder();
 
 function MudBlazorTemplate(tokens) {
