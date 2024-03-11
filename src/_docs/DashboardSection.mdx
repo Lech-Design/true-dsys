@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+import MudNavSide from "@/components/MudNavMenu/MadNavMenuSide";
+import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
+
+<Meta title="Features/Dashboard/Shared Components/Section" />
+
+# True Dash Section
+
+The True dashboard is a reusable page pattern that divides the content
+into sections with single or multiple widgets.
+
+Here is how the TrueDashSection component is constructed:
+
+```csharp
+<MudGrid Spacing="0" Class="gap-8">
+    <!-- Intro -->
+    <MudItem Class="mud-grid-item-xs-12">
+        <MudText Typo="Typo.h5" Class="mb-4">
+            @Title
+        </MudText>
+        <MudText Typo="Typo.body2" Class="grey-text text-darken-1">
+            @Description
+        </MudText>
+    </MudItem>
+    <!-- Card Widget -->
+    <MudGrid Spacing="4">
+        @ChildContent
+    </MudGrid>
+</MudGrid>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+
+    [Parameter]
+    public string Title {get; set;} = "Welcome to True";
+
+    [Parameter]
+    public string Description {get; set;} = "As you engage more with True, this section will blossom...";
+}
+```
+
+<br />

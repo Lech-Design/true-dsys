@@ -1,14 +1,10 @@
-import MudToolBar from "@/components/MudToolbar/MudToolBar";
-import MudContent from "@/components/MudContent/MudContent";
 import MudLayout from "@/components/Layout/MudLayout";
-import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
-import EmissionsPage from "../Content/EmissionsPage";
-import DashboardTemplate from "../Dashboard/DashboardTemplate";
-import DummyPage from "./DummyPage";
 import MudNavMenu from "@/components/MudNavMenu/MudNavMenu";
+import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
 import MudNavSide from "@/components/MudNavMenu/MadNavMenuSide";
+import MudContent from "@/components/MudContent/MudContent";
 
-export default function PageTemplate(props) {
+export default function TrueLayoutPrimary(props) {
   let { children } = props;
   let classes = props.classes ? ` ${props.classes}` : "";
   return (
@@ -23,10 +19,14 @@ export default function PageTemplate(props) {
         </MudNavSide>
       </MudDrawLeftNav>
       <MudContent>
-        {/* <MudToolBar /> */}
-        {/* <EmissionsPage /> */}
-        {/* <DummyPage /> */}
-        <DashboardTemplate />
+        <div
+          style={{
+            width: "100%",
+            height: "500px",
+            background: "#fff",
+            margin: "2rem",
+          }}
+        ></div>
       </MudContent>
     </MudLayout>
   );

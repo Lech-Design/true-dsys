@@ -1,0 +1,31 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+
+<Meta title="Patterns/Layout & Pages/Page Templates/Normal" />
+
+# True Page Normal
+
+This pattern wraps content within a MudContainer and MudGrid Component.
+
+The container uses the following class to define the max width of 1280px:
+
+> mud-container-maxwidth-lg
+
+<br />
+Here is how it is structured in MudBlazor:
+
+```csharp
+<MudContainer Class="mud-container-maxwidth-lg">
+    <MudGrid Spacing="0" Class="pt-8 gap-12 mb-10">
+        @ChildContent
+    </MudGrid>
+</MudContainer>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+}
+```
+
+## MudBlazor example
+
+See [this](https://try.mudblazor.com/snippet/wuGeEdOMzfAKoUVI) live MudBlazor example

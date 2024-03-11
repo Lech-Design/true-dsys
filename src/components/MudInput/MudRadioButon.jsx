@@ -6,7 +6,6 @@ export default function MudRadioButton(props) {
   return (
     <label className="mud-radio mud-radio-content-placement-end">
       <span
-        tabindex="0"
         className={`mud-button-root mud-icon-button mud-ripple mud-ripple-radio mud-primary-text hover:mud-primary-hover${checked} py-0`}
       >
         <span

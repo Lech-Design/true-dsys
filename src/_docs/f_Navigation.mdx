@@ -1,0 +1,57 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+import MudNavSide from "@/components/MudNavMenu/MadNavMenuSide";
+import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
+
+<Meta title="Patterns/Navigation/Docs" />
+
+# True Navigation panel
+
+The Navigation panel is wrapped in a right sidebar. We use icons on all primary Nav items.
+When the app is viewed on smaller screen sizes, the panel shrinks to a mini state (not hidden)
+so only the icons are visible.
+
+<div style={{ display: "flex", gap: "2rem" }}>
+  <div style={{ width: "360px", padding: ".5rem", background: "#fff" }}>
+    <Unstyled>
+      <MudNavSide>
+        {"Dashboard"}
+        {"Net Zero"}
+        {"Procurement"}
+      </MudNavSide>
+    </Unstyled>
+  </div>
+  <div style={{ width: "101px", padding: ".5rem", background: "#fff" }}>
+    <aside className="mud-drawer-mini">
+      <MudNavSide />
+    </aside>
+  </div>
+</div>
+
+<br />
+Here is how it is structured in MudBlazor:
+
+```csharp
+<MudItem Class="pa-4">
+    <MudNavMenu Color="Color.Primary" Rounded="true" Dense="false" Margin="Margin.Normal" Class="mud-width-full">
+        <MudNavLink Href="/" Icon="@Icons.Material.Filled.Dashboard">Dashboard</MudNavLink>
+        <MudNavLink Href="/sus" Icon="@Icons.Material.Filled.Bolt">Energy Procurement</MudNavLink>
+        <MudNavGroup Title="Sustainability" Icon="@Icons.Material.Filled.EnergySavingsLeaf" Expanded="true">
+            <MudNavLink Href="/sus">Emissions</MudNavLink>
+            <MudNavLink Href="/sus">Targets</MudNavLink>
+            <MudNavLink Href="/sus">Projects</MudNavLink>
+        </MudNavGroup>
+        <MudNavLink Href="/sus" Icon="@Icons.Material.Filled.Balance">Finance</MudNavLink>
+        <MudNavLink Href="/sus" Icon="@Icons.Material.Filled.Apartment">Portfolio management</MudNavLink>
+    </MudNavMenu>
+</MudItem>
+```
+
+To enable the mini state of the nav menu, set the following property on the MudDrawer component:
+
+```csharp
+<MudDrawer Variant="@DrawerVariant.Mini" {other props}>
+```
+
+## MudBlazor example
+
+See [this](https://try.mudblazor.com/snippet/wuGeEdOMzfAKoUVI) live MudBlazor example

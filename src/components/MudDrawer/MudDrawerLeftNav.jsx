@@ -6,7 +6,7 @@ export default function MudDrawLeftNav(props) {
   return (
     <MudDraw
       classes={
-        "mud-drawer-fixed mud-drawer-pos-left mud-drawer--open mud-drawer--initial mud-drawer-md mud-drawer-clipped-always mud-elevation-2 mud-drawer-responsive" +
+        "mud-drawer-fixed mud-drawer-pos-left mud-drawer--open mud-drawer--initial mud-drawer-md mud-drawer-clipped-always mud-elevation-1 mud-drawer-responsive mud-drawer-mini" +
         classes
       }
     >

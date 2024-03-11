@@ -1,0 +1,31 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+import MudNavSide from "@/components/MudNavMenu/MadNavMenuSide";
+import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
+
+<Meta title="Features/Dashboard/Shared Components/Page" />
+
+# True Dash Page
+
+This pattern provides the overall page structure for the True Dashboard.
+
+This page is constructed with the following component hierarchy:
+
+```js
+<TrueDashSection>
+    <MudItem>
+        <TrueWidget>
+            <!-- Optional Header -->
+            <TrueWidgetHeader>
+                <!-- Optional Interactive actions  -->
+            </TrueWidgetHeader>
+            @Place your main content here
+        </TrueWidget>
+    </MudItem>
+</TrueDashSection>
+```
+
+<br />
+
+## MudBlazor example
+
+See [this](https://try.mudblazor.com/snippet/GOGyOHFbSeieNSwH) live MudBlazor example

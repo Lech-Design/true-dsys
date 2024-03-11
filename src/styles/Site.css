@@ -1,3 +1,7 @@
+:root {
+  --mud-drawer-width-left: 300px !important;
+}
+
 .opacity-thirty {
   opacity: 0.3;
 }

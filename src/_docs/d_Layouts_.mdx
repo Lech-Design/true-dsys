@@ -1,0 +1,61 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+import TrueLayoutPrimary from "@/components/Patterns/Pages/Templates/TrueLayoutPrimary";
+import * as LayoutPrimaryStories from "../components/Patterns/Pages/Templates/TrueLayoutPrimary.stories";
+
+<Meta title="Patterns/Layout & Pages/Layout/Primary" />
+
+# Primary layout
+
+In this pattern, the left drawer is by default visible on larger breakpoints.
+Once the page shrinks the drawer shrinks down to a mini version. Icons should
+be placed on NavMenu items for this pattern to work correctly.
+
+<Canvas of={LayoutPrimaryStories.Design} />
+
+> This pattern works correctly with this navigation pattern
+
+Here is the structure in MudBlazor:
+
+```csharp
+@using static TruePageNormal
+@using static DashboardPage
+@using static TrueNavMenu
+
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <!-- Quick example, follow what we have on True for now -->
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+        <MudSpacer />
+        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
+    </MudAppBar>
+
+    <!-- See theme > LayoutProperties for mini width -->
+    <MudDrawer Width="260px" @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="1" Variant="@DrawerVariant.Mini">
+        <TrueNavMenu />
+    </MudDrawer>
+
+    <MudMainContent>
+        <TruePageNormal>
+            <DashboardPage />
+        </TruePageNormal>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
+```
+
+## MudBlazor example
+
+See [this](https://try.mudblazor.com/snippet/wuGeEdOMzfAKoUVI) live MudBlazor example

@@ -13,6 +13,10 @@ import TrueCardHeaderActions from "../True/TrueCard/TrueCardHeaderActions";
 import TrueCardContent from "../True/TrueCard/TrueCardContent";
 import TrueCardActions from "../True/TrueCard/TrueCardActions";
 
+import ChartjsBar from "@/components/_data/ChartjsBar";
+
+import TrueDashSection from "./TrueDashSection";
+
 import { useState } from "react";
 
 export default function DashboardTemplate(props) {
@@ -27,66 +31,34 @@ export default function DashboardTemplate(props) {
   return (
     <MudContainer classes="mud-container-maxwidth-lg">
       <MudGrid classes="pt-8 gap-8 mb-10">
-        <MudItem classes="mud-grid-item-xs-12">
-          <TrueCard>
-            <TrueCardHeader>
-              <MudCardHeaderContent>
-                <MudTypography typo="h5" classes="grey-text text-darken-1">
-                  Consumption
-                </MudTypography>
-              </MudCardHeaderContent>
-              <TrueCardHeaderActions>
-                <MudRadioGroup action={switchGraph}>
-                  {"Power"}
-                  {"Gas"}
-                </MudRadioGroup>
-              </TrueCardHeaderActions>
-            </TrueCardHeader>
-            <TrueCardContent>
-              {energy === 0 ? (
-                <BarChart
-                  items={[
-                    { label: "Jan", value: 20000 },
-                    { label: "Feb", value: 30000 },
-                    { label: "March", value: 130000 },
-                    { label: "April", value: 112340 },
-                    { label: "May", value: 21129 },
-                    { label: "June", value: 32129 },
-                    { label: "July", value: 55556 },
-                    { label: "Aug", value: 111237 },
-                    { label: "Sept", value: 46820 },
-                    { label: "Oct", value: 19300 },
-                    { label: "Nov", value: 100347 },
-                    { label: "Dec", value: 19234 },
-                  ]}
-                  height={400}
-                />
-              ) : (
-                <BarChart
-                  items={[
-                    { label: "Jan", value: 20000 },
-                    { label: "Feb", value: 20000 },
-                    { label: "March", value: 130000 },
-                    { label: "April", value: 112340 },
-                    { label: "May", value: 11129 },
-                    { label: "June", value: 32129 },
-                    { label: "July", value: 55556 },
-                    { label: "Aug", value: 100237 },
-                    { label: "Sept", value: 76820 },
-                    { label: "Oct", value: 13300 },
-                    { label: "Nov", value: 120347 },
-                    { label: "Dec", value: 12234 },
-                  ]}
-                  height={400}
-                  classes="secondary"
-                />
-              )}
-            </TrueCardContent>
-            <TrueCardActions>
-              <MudButton color="primary">See more</MudButton>
-            </TrueCardActions>
-          </TrueCard>
-        </MudItem>
+        <TrueDashSection
+          title="Welcome to the Town Square"
+          description="Something"
+        >
+          <MudItem classes="mud-grid-item-xs-12">
+            <TrueCard>
+              <TrueCardHeader>
+                <MudCardHeaderContent>
+                  <MudTypography typo="h5" classes="grey-text text-darken-1">
+                    Consumption
+                  </MudTypography>
+                </MudCardHeaderContent>
+                <TrueCardHeaderActions>
+                  <MudRadioGroup action={switchGraph}>
+                    {"Power"}
+                    {"Gas"}
+                  </MudRadioGroup>
+                </TrueCardHeaderActions>
+              </TrueCardHeader>
+              <TrueCardContent>
+                <ChartjsBar />
+              </TrueCardContent>
+              <TrueCardActions>
+                <MudButton color="primary">See more</MudButton>
+              </TrueCardActions>
+            </TrueCard>
+          </MudItem>
+        </TrueDashSection>
 
         <MudItem classes="mud-grid-item-xs-12">
           <MudGrid classes="mud-grid-spacing-xs-3">

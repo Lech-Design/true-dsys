@@ -1,0 +1,68 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+import MudNavSide from "@/components/MudNavMenu/MadNavMenuSide";
+import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
+import TrueWidget from "@/components/Patterns/Dashboard/DashboardWidget";
+
+<Meta title="Features/Dashboard/Shared Components/Widget" />
+
+# True Widget
+
+The Dashboard widget is the main building block for composing Dashboard type pages.
+It is a shared component that can be reused in other pages throughout the True app.
+At it's heart is a MudPaper component with some defined properties for Elevation, outlines and padding.
+
+<div style={{ margin: "2rem" }}>
+  <TrueWidget />
+</div>
+
+The Widget contains a header area to include and title and interactive actions, below this you are free
+to define the content you wish to include, for the examples in these docs we show some simple
+chart illustrations but these are not final designs.
+
+Here is how the TrueDashWidget component is constructed:
+
+```csharp
+<MudPaper Outlined="true" Class="px-8 py-6">
+    <MudGrid Spacing="0">
+        <!-- Content goes here -->
+        @ChildContent
+    </MudGrid>
+</MudPaper>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+}
+```
+
+<br />
+
+## True Widget Header
+
+The Widget Header is composed of a MudGrid component which separates the Title text from any interactive actions.
+In the example below @ChildContent provides composition for optional interactive actions.
+
+Here is how the True Widget header is constructed:
+
+```csharp
+<MudItem Class="mud-grid-item-xs-12">
+    <MudGrid Spacing="0" Class="pa-0 ma-0 pb-10 justify-space-between align-center">
+        <MudText Typo="Typo.h5" Class="grey-text text-darken-1">
+            @Title
+        </MudText>
+        @ChildContent
+    </MudGrid>
+</MudItem>
+
+@code {
+    [Parameter]
+    public string Title {get; set;} = "Consumption";
+
+    [Parameter]
+    public RenderFragment ChildContent {get; set;}
+}
+```
+
+## Putting it all together
+
+To compose widgets with an included header see the TrueDashPage pattern.

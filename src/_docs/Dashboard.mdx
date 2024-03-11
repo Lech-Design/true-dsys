@@ -1,0 +1,83 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+import MudNavSide from "@/components/MudNavMenu/MadNavMenuSide";
+import MudDrawLeftNav from "@/components/MudDrawer/MudDrawerLeftNav";
+
+<Meta title="Features/Dashboard/Docs" />
+
+# True Dashboard
+
+The True dashboard is a reusable page pattern that divides the content
+into sections with single or multiple widgets.
+
+<br />
+
+## How we construct the Dashboard
+
+The Dashboard is constructed using the Primary True layout (TrueLayoutPrimary), this features a left draw
+containing the main Nav which automatically shrinks at smaller breakpoints.
+
+We then use the True Page Normal pattern which sets a max width and wraps all the page
+content in a flex grid with even spacing.
+
+Now we can compose the Dashboard page using Dashboard sections and the Dashboard widget pattern.
+
+Below is a representation of the pattern hierarchy:
+
+```js
+<TrueLayoutPrimary>
+  <TruePageNormal>
+    <TrueDashPage>
+      <TrueDashSection>
+        <TrueWidget>
+```
+
+See [here](?path=/docs/patterns-layout-pages-docs--docs) for more details on how to compose Layouts and Pages
+
+<br />
+
+### True Layout Primary
+
+See [here](?path=/docs/patterns-layout-pages-layout-primary--docs) for design and specifications of this pattern.
+
+We have designed this as shared pattern so that it can be reused in other sections and pages within the True app.
+
+<br />
+
+### True Page Normal
+
+This pattern is composed with the MudContainer component, this allows us to define a max width for our main content
+For this specific 'Normal' configuration we use the following container CSS class:
+
+> mud-container-maxwidth-lg
+
+This sets a max width of 1280px on the container.
+
+We also apply a MudGrid component with 0 spacing but with a grid gap of 12 to evenly space sections within the page.
+
+See [here](?path=/docs/patterns-layout-pages-page-templates-normal--docs) for design and specifications of this pattern.
+
+<br />
+
+### True Dash Page
+
+Here is where we compose the Dashboard page.
+
+We divide the page using the TrueDashSection component. This provides an optional Title and description for each section.
+Next we place the TrueWidget component to compose our individual dashboard widgets. This is wrapped in a MudItem
+component which can be styled with utility classes to define it's size in the grid.
+
+<br />
+#### True Dash Section
+
+See [here](?path=/docs/features-dashboard-shared-components-section--docs) for design and specifications
+
+<br />
+
+#### True Widget
+
+See [here](?path=/docs/features-dashboard-shared-components-widget--docs) for design and specifications
+
+<br />
+## MudBlazor example
+
+See [this](https://try.mudblazor.com/snippet/GOGyOHFbSeieNSwH) live MudBlazor example

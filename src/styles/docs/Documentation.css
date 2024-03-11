@@ -2,6 +2,14 @@
   background: var(--tr-color--background-200) !important;
 }
 
+.css-k7lbue {
+  padding: 4rem !important;
+}
+
+.css-qa4clq {
+  max-width: initial !important;
+}
+
 .css-qa4clq :where(p:not(.sb-anchor, .sb-unstyled, .sb-unstyled p)) {
   font-size: 1rem !important;
 }

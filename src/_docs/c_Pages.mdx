@@ -1,0 +1,81 @@
+import { Canvas, Meta, Story, Unstyled } from "@storybook/addon-docs";
+
+<Meta title="Patterns/Layout & Pages/Docs" />
+
+# How we construct Pages
+
+https://try.mudblazor.com/snippet/wuGeEdOMzfAKoUVI
+
+Within the Design system we construct pages with the following pattern hierarchy:
+
+- Layouts (Reusable MudBlazor layout patterns)
+  - Page templates
+    - Feature content
+
+## Layouts
+
+Layouts in MudBlazor are constructed with the following pattern:
+
+```csharp
+<MudLayout>
+    <MudAppBar>
+        My Application
+    </MudAppBar>
+    <MudDrawer Open="true">
+
+    </MudDrawer>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+```
+
+See [here](https://mudblazor.com/getting-started/layouts#appbar-&-drawer) for detailed documentation on MudBlazor layouts.
+
+<br />
+
+To maintain consistency we have defined some specific Layouts
+in MudBlazor that you can re-use when building new features.
+
+Here is an example of the layout we use for the Dashboard:
+
+```csharp
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+        <MudSpacer />
+        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
+    </MudAppBar>
+    <MudDrawer Width="260px" @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="1" Variant="@DrawerVariant.Mini">
+        <TrueNavMenu />
+    </MudDrawer>
+
+    <MudMainContent>
+        <DashboardPage />
+    </MudMainContent>
+</MudLayout>
+```
+
+## Page templates
+
+To provide greater felxibility we separate layout from page structure,
+this allows us to define different page widths within the True application.
+
+A page template is constructed with the following pattern:
+
+```csharp
+<MudContainer Class="mud-container-maxwidth-lg">
+    <MudGrid Spacing="0" Class="pt-8 gap-12 mb-10">
+        @ChildContent
+    </MudGrid>
+</MudContainer>
+```
+
+For True we define two templates, "Normal" and "Wide".
+
+## Feature content
+
+Here is where we place our features and content.
+
+See the Dashboard pattern for an example.
